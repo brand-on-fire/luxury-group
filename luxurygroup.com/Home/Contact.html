@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Contact Us</title>
+		<meta charset="utf-8">
+		<link rel="icon" type="img/ico" href="Home/img/favicon.ico">
+		<meta property="og:image" content="http://luxurygroubp.com/img/logo.png" />
+		<meta name="keywords" content="luxury hotels,luxury vacations,5 star hotels,five star hotels, ritz hotel,four seasons,fairmont hotel, intercontinental hotels, waldorf astoria hotels, park hyatt hotels, j w marriott hotels, small luxury hotels, hotel reservations, finest luxury small hotels of the world, boutique luxury hotel, world's finest hotels,top hotels, best hotels, finest small hotels,hotel resort,resort hotels,london hotels, new york hotels, paris hotels, rome hotels, bangkok hotels, bali hotels, online hotel reservations,hotels,luxury resorts,luxury travel,hotel, finest luxury hotels of the world, luxury resort hotel,leading hotel,luxury hotels of the world">
+		<meta name="description" content="Ultimate Gateway to Worlds finest luxury Hotels, Resorts and Spas Since 1998. Book Direct and Save.">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6ENPDM1T57"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6ENPDM1T57');
+</script>		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<link href="../favicon.ico" type="image/x-icon" rel="icon" /><link href="../favicon.ico" type="image/x-icon" rel="shortcut icon" /><link rel="stylesheet" type="text/css" href="../css/jquery.bxslider.css" /><link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" /><link rel="stylesheet" type="text/css" href="../css/style.css" /><link rel="stylesheet" type="text/css" href="../css/main.css" /><link rel="stylesheet" type="text/css" href="../css/scroll.css" /><link rel="stylesheet" type="text/css" href="../css/nivo-slider.css" /><script type="text/javascript" src="../js/jquery.nivo.slider.js"></script><script type="text/javascript" src="../js/jquery.colorbox.js"></script><script type="text/javascript" src="../js/typed.min.js"></script>		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+<script type="text/javascript">
+	//$(window).load(function() {
+	$(document).ready(function() {
+		$('#slider').nivoSlider({
+			effect:'boxRain', // Specify sets like: 'boxRain,fold,fade,sliceDown'
+			slices:15, // For slice animations
+			boxCols: 8, // For box animations
+			boxRows: 4, // For box animations
+			animSpeed:800, // Slide transition speed
+			pauseTime:4000, // How long each slide will show
+			startSlide:0, // Set starting Slide (0 index)
+			directionNav:true, // Next & Prev navigation
+			directionNavHide:false, // Only show on hover
+			controlNav:true, // 1,2,3... navigation
+			responsive: true,
+			width: '100%',
+			height: '100% !important',
+			 afterLoad: function(){
+			 	$('.load-img').css({display: 'none'});
+			 	$('#slider').css({visibility: 'visible'});
+			 }			 
+		});
+	}); 
+</script>
+
+	</head>
+		<body id="top" class="lang-en">
+			<header >
+			    <div class="container" >
+				    					
+
+<div class="row">
+	<div class="col-sm-3 logo">
+		<a href="../index.html" title="Luxury Group Logo"><img src="../img/logo.jpg" alt="Logo" /></a>	</div>
+	<div class="col-sm-9 box-right">
+		<h1>LUXURY GROUP <br>
+			<span>PASSION FOR LUXURY HOTELS</span>
+		</h1>
+		<div class="lang">
+			<a href="Home/language/en" title="English"><img src="../img/flag-us.png" alt="US Flag" /></a><a href="Home/language/fr" title="French"><img src="../img/flag-fr.png" alt="Fr Flag" /></a><a href="Home/language/ch" title="Chinese"><img src="../img/flag-ch.png" alt="Ch Flag" /></a><a href="Home/language/ru" title="Russian"><img src="../img/flag-ru.png" alt="Ru Flag" /></a>		</div>
+		
+		<div class="clearfix"></div>
+		<!-- <div class="top_nav">
+			<ul>
+				<li><a href="/Hotels/View/ISwwYGAKYAo%3D" title="View Hotels For Americas &amp; The Caribbean">Americas &amp; The Caribbean</a></li><li><a href="/Hotels/View/ISxAYGAKYAo%3D" title="View Hotels For Europe">Europe</a></li><li><a href="/Hotels/View/ISxQYGAKYAo%3D" title="View Hotels For Asia, Australia &amp; Indian Ocean">Asia, Australia &amp; Indian Ocean</a></li><li><a href="/Hotels/View/IS1gYGAKYAo%3D" title="View Hotels For Africa &amp; The Middle East">Africa &amp; The Middle East</a></li>			</ul>
+		</div>-->
+        
+        <div class="search"><br> <div class="elementToFadeInAndOut" style="display:none"><a href="covid-19-testing-centers/"><img src="../img/luxury-group-covid-icon.jpg" width="225px" id="covid-image" ></a></div>
+			<script type="text/javascript" src="../js/jquery-ui-1.8.2.custom.min.js"></script>			<script type="text/javascript">		 
+				$(document).ready(function() {
+				    //console.log("asdasdas");
+					var $searchBox = $('#hotelsearch');
+					
+					$searchBox.autocomplete({source:'Hotels/Search',minLength:1,select:function(evt,ui) {
+						var ss=ui.item.value;
+						ss=ss.trim();
+						var ss=ui.item.value;
+						if(ss.indexOf("- ") >= '0') {
+							var ss = ss.replace("- ","");
+							var chk = 'City';
+						} else {
+							var chk = 'Country';
+						}						
+						var url = "Hotels/HotelListing/"+chk+"/"+ss;
+						var decodedUri =decodeURIComponent(url);
+						var urlm=unescape(decodedUri);
+						window.location.href=urlm;
+					}});
+					
+						
+	$("#hoverli").hover(
+    function () {
+        $('#actions_menu').finish().slideDown('fast');
+    });
+
+$(".container").hover(
+    function () {
+        $('#actions_menu').finish().slideUp('fast');
+    }
+);
+
+var messages=["A COLLECTION OF WORLD'S FINEST HOTELS AND RESORTS SINCE 1998","A COLLECTION OF WORLD'S FINEST HOTELS AND RESORTS SINCE 1998","A COLLECTION OF WORLD'S FINEST HOTELS AND RESORTS SINCE 1998"];
+var rank=0;
+
+// Code for Chrome, Safari and Opera
+document.getElementById("myTypewriter").addEventListener("webkitAnimationEnd", changeTxt);
+
+// Standard syntax
+document.getElementById("myTypewriter").addEventListener("animationend", changeTxt);
+
+function changeTxt(e){
+  _h1 = this.getElementsByTagName("h1")[0];
+  _h1.style.webkitAnimation = 'none'; // set element animation to none
+   setTimeout(function() { // you surely want a delay before the next message appears
+      _h1.innerHTML=messages[rank];
+      var speed =1.5*messages[rank].length/20; // adjust the speed (3.5 is the original speed, 20 is the original string length
+      _h1.style.webkitAnimation = 'typing '+speed+'s steps(40, end), blink-caret .75s step-end infinite'; //  switch to the original set of animation      
+      (rank===messages.length-1)?rank=0:rank++; // if you have displayed the last message from the array, go back to the first one, else go to next message
+    }, 1000);
+}
+	});		 
+			</script> 
+			<link rel="stylesheet" type="text/css" href="../css/smoothness/jquery-ui-1.8.2.custom.css" /> 
+            <label><a href="Contact.html#">Destinations:</a></label>
+			<div class="navbar-form navbar-left">
+							<div class="form-group">
+					<div class="input text"><input name="data[country_city]" class="form-control" size="24" placeholder="" id="hotelsearch" type="text"/></div>				</div>
+						</div>
+			
+			<!--<b><font color="white" family='Georgia, "Times New Roman", Times, serif' size='2px'>A COLLECTION OF WORLD'S FINEST HOTELS AND RESORTS  SINCE 1998.  BOOK DIRECT !</font></b>..>
+		</div>
+        <!--<div class="search-tagline"> <span style="color:#efb321">Enter DESTINATION / CITY or click on Continents below for list</span></div>-->
+ 
+        
+		 <!--<div class="new-menu">
+            <ul>
+                <li><a href="/Hotels/View/ISwwYGAKYAo%253D" class="">AMERICAS &amp; THE CARIBBEAN</a></li>
+                <li><a href="/Hotels/View/ISxAYGAKYAo%253D" class="">EUROPE</a></li>
+                <li><a href="/Hotels/View/ISxQYGAKYAo%253D" class="">AUSTRALIA, ASIA &amp; INDIAN OCEAN</a></li>
+                <li><a href="/Hotels/View/IS1gYGAKYAo%253D" class="">AFRICA &amp; THE MIDDLE EAST</a></li>
+            </ul>
+		</div>-->
+        <!--<div class="tag_line">A COLLECTION OF WORLD'S FINEST HOTELS AND RESORTS  SINCE 1998.  &nbsp;&nbsp;BOOK DIRECT !
+       </div>-->
+       <div class="tag_line"><div class="typewriter" id="myTypewriter">
+         <h1 class="tag" style="animation: 4.5s steps(40) 0s 1 normal none running typing, 0.75s step-end 0s infinite normal none running blink-caret;">A COLLECTION OF WORLD'S FINEST HOTELS AND RESORTS SINCE 1998</h1>
+</div><h3 class="elementToFadeInAndOut" style="font-size:1em;font-weight: 600;width:100%;text-align:center;margin-top:-7px;clear:both">BOOK DIRECT !</h3></div> 
+		<div class="nav_main">
+			<nav class="navbar navbar-default">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<em>Menu</em>
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li><a href="index.html">LOBBY</a></li>
+							<li><a href="destinations.html">DESTINATIONS</a></li>
+							<li><a href="JoinUs.html">HOTELIERS</a></li>
+							<!--	<li id="hoverli"><a href="/Home/destinations">DESTINATIONS</a>						<ul id="actions_menu" class="file_menu" style="display:none;">
+							   <div><a href="/Hotels/View/ISwwYGAKYAo%253D">AMERICAS & THE CARIBBEAN</a></div>
+							    <div><a href="/Hotels/View/ISxAYGAKYAo%253D">EUROPE</a></div>
+							    <div><a href="/Hotels/View/ISxQYGAKYAo%253D">AUSTRALIA, ASIA & INDIAN OCEAN</a></div>
+							    <div><a href="/Hotels/View/IS1gYGAKYAo%253D">AFRICA & THE MIDDLE EAST</a></div>
+							</ul> -->
+							
+							
+							</li>
+							<li><a href="CityInformation.html">CITY SCOOP</a></li>
+							<li><a href="CustomVacations.html">CUSTOM VACATIONS</a></li>
+							<li><a href="AboutUs.html">ABOUT US</a></li>
+							<li><a href="Contact.html">CONTACT</a></li>
+						</ul>
+			
+					<!--	<ul id="actions_menu" class="file_menu" style="display:none;">
+							   <div><a href="/Hotels/View/ISwwYGAKYAo%253D">AMERICAS & THE CARIBBEAN</a></div>
+							    <div><a href="/Hotels/View/ISxAYGAKYAo%253D">EUROPE</a></div>
+							    <div><a href="/Hotels/View/ISxQYGAKYAo%253D">AUSTRALIA, ASIA & INDIAN OCEAN</a></div>
+							    <div><a href="/Hotels/View/IS1gYGAKYAo%253D">AFRICA & THE MIDDLE EAST</a></div>
+							</ul> -->
+					</div>
+				</div>
+			</nav>
+		</div>
+	</div>
+</div>
+
+<div class="clearfix"></div>
+
+				</div>
+			</header>
+			
+			<style>
+@media only screen and (max-width:360px){
+#recaptcha_area, #recaptcha_table {width: 100% !important;}
+}
+.success_message{
+    color: #efb321;
+    font-family: Georgia,"Times New Roman",Times,serif;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 25px;
+   }
+</style>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<div class="container">
+<section class="about_us contact_us">
+ 	<div class="col-md-4 address">
+		<h2>THE LUXURY GROUP</h2>
+		<span><a href="http://www.luxurygroup.com/">www.LuxuryGroup.com</a></span>
+		<p>P.O. Box 2411<br>
+        Laguna Hills, CA 92654<br>
+		United States of America<br>
+		Tel. + 1 415  747 8080 <br>
+		E-mail: <a href="mailto:info@luxurygroup.com">info@luxurygroup.com</a> </p>
+	</div>
+    <div class="col-md-8 article">
+        <div>
+			<h1 id="contact_msg_show">CONTACT US </h1>
+			<img src="../img/HPM_Retouche_02.jpg" alt="Contact Us" />            <p>All properties listed, are selected, visited, inspected and / or stayed at by a member of our staff or an associate. While we welcome properties that wish to be included on this exclusive list, only those meeting the highest and exacting standards of luxury, service, quality and value will be considered for inclusion. We welcome the feedback of any nature about the hotels on our list and it is our promise to relay those feedbacks to the top management of the properties. Such feedbacks from travelers and guests among other factors influence the decision to include a given property on the exclusive list. </p>
+            <strong>THE LUXURY GROUP</strong>
+			            <form action="Contact.html" id="ContactContactForm" method="post" accept-charset="utf-8"><div style="display:none;"><input type="hidden" name="_method" value="POST"/></div>				<div class="row" id="contact-form">
+					<div class="form-group col-md-6">
+						<label for="exampleInputEmail1"><span style="color:red;">*</span> Full Name:</label>
+						<div class="input text"><input name="data[Contact][full_name]" class="form-control" required="required" placeholder="Enter Full Name" tabindex="1" type="text" id="ContactFullName"/></div>						<label for="exampleInputPassword1"><span style="color:red;">*</span> Phone:</label>
+						<div class="input tel"><input name="data[Contact][phone]" class="form-control" required="required" placeholder="Enter Contact Number" tabindex="3" type="tel" id="ContactPhone"/></div>					</div>
+					<div class="form-group col-md-6">
+						<label for="exampleInputPassword1"><span style="color:red;">*</span> Email Address</label>
+						<div class="input email"><input name="data[Contact][email]" class="form-control" required="required" placeholder="Enter Email Address" tabindex="2" type="email" id="ContactEmail"/></div>						<label for="exampleInputPassword1"><span style="color:red;">*</span> Comments</label>
+						<textarea name="data[Contact][comments]" required="required" class="form-control" rows="3" placeholder="Write Your Message/Comments Here" tabindex="4" id="ContactComments"></textarea>					</div>
+					<div class="form-group col-md-6 captcha">
+						<!--<label for="exampleInputPassword1"><span style="color:red;">*</span> Please type the text below:</label>-->
+						<!-- <script type="text/javascript">
+							var RecaptchaOptions = {theme : 'clean'};
+						</script> -->
+							
+						<div class="recaptcha"><div data-sitekey="6Lf7ZWUUAAAAAP7Lc_PXoQsr3Q0ktd4v1QZOPrOf" data-theme="light" class="g-recaptcha"></div></div>  						
+						<div class="form-group submit">
+							<button class="btn btn-default" type="submit">Submit</button>						</div> 
+					</div>					     
+				</div>
+			</form>        </div>
+    </div>
+</section>
+</div>
+<script>
+$(document).ready(function() { 
+var suc_msg = $('.success_message').text();
+if(suc_msg != '')
+{
+$('.success_message').css('color','#EFB321');
+$('.success_message').css('text-align','center');
+$('.contact_us').css('background-color','black');
+$('.contact_us').css('padding-bottom','30px');
+$(".article").hide();
+$(".address").hide();
+}
+});
+</script>			
+		<div class="container">
+			<div class="clearfix"></div>
+			<section class="footer">
+				<div class="links">
+	<a href="Home" title="Lobby">LOBBY</a><img src="../img/img-14.png" alt="bulletin" /><a href="AboutUs.html" title="ABOUT LUXURY GROUP">ABOUT US</a><img src="../img/img-14.png" alt="bulletin" /><a href="JoinUs.html" title="JOIN LUXURY GROUP">JOIN US</a><img src="../img/img-14.png" alt="bulletin" /><a href="CityInformation.html" title="CITY INFORMATION">CITY INFORMATION</a><img src="../img/img-14.png" alt="bulletin" /><a href="Contact.html" title="Contact Luxury Group">CONTACT</a>	<div class="row">
+		<a href="Home/Terms" title="Terms of Use">Terms of Use</a>	</div>
+</div>
+<div class="row">
+	<div class="col-sm-6 copy">
+		Copyright © 2014 - 2025 The Luxury Group. | All Rights Reserved
+	</div>
+	<div class="col-sm-6 regi">
+		 Dun & Bradstreet Registration No. 93-191-7702
+	</div>
+</div>
+
+			</section>
+		</div>	
+		</div>
+		</div>
+		<script type="text/javascript" src="../js/bootstrap.min.js"></script><script type="text/javascript" src="../js/jquery.scrollbox.js"></script><script type="text/javascript" src="../js/jquery.bxslider.js"></script><script type="text/javascript" src="../js/carousel.js"></script>		<script>
+		    var lssliderparam = [{"divid":".lshowcase-wrap-carousel-0","auto":"false","pause":"4000","autohover":"true","ticker":"true","tickerhover":"true","useCSS":"false","autocontrols":"false","speed":"130000","slidewidth":"200","slidemargin":"3","infiniteloop":"true","pager":"false","controls":"true","minslides":"1","maxslides":"8","moveslides":"1"}];
+		</script>
+		<script>
+			$(function () {
+				$('#marque').scrollbox({
+					linear: true,
+					step: 1,
+					delay: 0,
+					speed: 50
+				});
+			});
+		</script>
+		<link rel="stylesheet" type="text/css" href="../css/colorbox.css" />	</body>
+</html>

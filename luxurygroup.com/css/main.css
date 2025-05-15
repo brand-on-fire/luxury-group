@@ -1,0 +1,177 @@
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+#myTypewriter{  width: 545px;}
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  /* float: none;    ensures centering    */
+  /*border-right: .15em solid orange;  The typwriter cursor */
+  white-space: nowrap; /*  Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+  typing 3.5s steps(40, end),
+  blink-caret .75s step-end infinite;
+}
+
+
+h1.tag{
+  font-size:1em;   
+  color:#fff;
+  font-family:helvetica neue,arial narrow;
+  text-align:left;
+}  
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: blue; }
+}
+
+pre {
+
+border:none;
+-webkit-border-radius: 0px;
+-moz-border-radius: 0px;
+border-radius: 0px;
+background: #272822;
+margin-bottom:40px;
+}
+
+@media only screen and (max-width: 600px) {
+    #myTypewriter {
+    width:100%;
+    }
+    .typewriter h1 {font-size:.66em;
+    }
+}
+
+.text{
+	background: #fff;
+/*	width:580px;
+	padding:20px;*/
+}
+
+.btn i{
+	margin-top:2px;
+	margin-right:4px;
+	color:#fff;
+}
+
+.download{
+	width: 260px;
+	float: left;
+}
+
+.ad-space{
+	float:right;
+	
+}
+
+.leaderboard-ad { margin-bottom:20px; margin-left: -40px; }
+
+.buttons .btn{
+	display: block;
+	width: 240px;
+	margin:10px 0 5px;
+	padding:10px;
+	background-image: none;
+	border:none;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+}
+
+/* Basic jQuery Slider essential styles */
+
+ul.bjqs{position:relative; list-style:none;padding:0;margin:0;overflow:hidden; display:none; height: 430px !important;}
+li.bjqs-slide{position:absolute; display:none;}
+ul.bjqs-controls{list-style:none;margin:0;padding:0;z-index:9999;}
+ul.bjqs-controls.v-centered li a{position:absolute;}
+ul.bjqs-controls.v-centered li.bjqs-next a{right:0;}
+ul.bjqs-controls.v-centered li.bjqs-prev a{left:0;}
+ol.bjqs-markers{list-style: none; padding: 0; margin: 0; width:100%; display: none;}
+ol.bjqs-markers.h-centered{text-align: center;}
+ol.bjqs-markers li{display:inline;}
+ol.bjqs-markers li a{display:inline-block;}
+p.bjqs-caption{display:block;width:96%;margin:0;padding:2%;position:absolute;bottom:0;}
+
+
+ul.bjqs-controls.v-centered li a{
+	display:block;
+	padding:10px;
+	background:#fff;
+	color:#000;
+	text-decoration: none;
+}
+
+ul.bjqs-controls.v-centered li a:hover{
+	background:#000;
+	color:#fff;
+}
+
+ol.bjqs-markers li a{
+	padding:5px 10px;
+	background:#000;
+	color:#fff;
+	margin:5px;
+	text-decoration: none;
+}
+
+ol.bjqs-markers li.active-marker a,
+ol.bjqs-markers li a:hover{
+	background: #999;
+}
+
+p.bjqs-caption{
+	background: rgba(255,255,255,0.5);
+}
+
+.bjqs-controls.v-centered {
+  display: none;
+}
+    @media only screen and (min-width: 768px) {
+.elementToFadeInAndOut {
+    -webkit-animation: fadeinout 2s linear forwards;
+    animation: fadeinout 2s linear forwards;
+    animation-iteration-count: 999999999;
+   /* margin-left:auto;
+    margin-right:0px;
+    display:block; */
+    float: right;
+    padding-top:10px;
+}
+}
+
+@-webkit-keyframes fadeinout {
+  0%,100% { opacity: 0; }
+  25% { opacity: 1; }
+}
+
+@keyframes fadeinout {
+  0%,100% { opacity: 0; }
+  25% { opacity: 1; }
+}
+
+    @media only screen and (max-width: 767px) {
+.elementToFadeInAndOut {
+  /*  display: block !important;   */
+    margin-left: auto !important;
+    margin-right: auto !important;  
+    padding-top:10px;
+    -webkit-animation: fadeinout 4s linear forwards;
+    animation: fadeinout 4s linear forwards;
+    animation-iteration-count: 999999999;
+        float: none !important;
+
+
+}
+}
+
+   

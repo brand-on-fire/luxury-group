@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>City Information | Luxury Group</title>
+		<meta charset="utf-8">
+		<link rel="icon" type="img/ico" href="Home/img/favicon.ico">
+		<meta property="og:image" content="http://luxurygroubp.com/img/logo.png" />
+		<meta name="keywords" content="luxury hotels,luxury vacations,5 star hotels,five star hotels, ritz hotel,four seasons,fairmont hotel, intercontinental hotels, waldorf astoria hotels, park hyatt hotels, j w marriott hotels, small luxury hotels, hotel reservations, finest luxury small hotels of the world, boutique luxury hotel, world's finest hotels,top hotels, best hotels, finest small hotels,hotel resort,resort hotels,london hotels, new york hotels, paris hotels, rome hotels, bangkok hotels, bali hotels, online hotel reservations,hotels,luxury resorts,luxury travel,hotel, finest luxury hotels of the world, luxury resort hotel,leading hotel,luxury hotels of the world">
+		<meta name="description" content="Ultimate Gateway to Worlds finest luxury Hotels, Resorts and Spas Since 1998. Book Direct and Save.">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6ENPDM1T57"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6ENPDM1T57');
+</script>		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<link href="../favicon.ico" type="image/x-icon" rel="icon" /><link href="../favicon.ico" type="image/x-icon" rel="shortcut icon" /><link rel="stylesheet" type="text/css" href="../css/jquery.bxslider.css" /><link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" /><link rel="stylesheet" type="text/css" href="../css/style.css" /><link rel="stylesheet" type="text/css" href="../css/main.css" /><link rel="stylesheet" type="text/css" href="../css/scroll.css" /><link rel="stylesheet" type="text/css" href="../css/nivo-slider.css" /><script type="text/javascript" src="../js/jquery.nivo.slider.js"></script><script type="text/javascript" src="../js/jquery.colorbox.js"></script><script type="text/javascript" src="../js/typed.min.js"></script>		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+<script type="text/javascript">
+	//$(window).load(function() {
+	$(document).ready(function() {
+		$('#slider').nivoSlider({
+			effect:'boxRain', // Specify sets like: 'boxRain,fold,fade,sliceDown'
+			slices:15, // For slice animations
+			boxCols: 8, // For box animations
+			boxRows: 4, // For box animations
+			animSpeed:800, // Slide transition speed
+			pauseTime:4000, // How long each slide will show
+			startSlide:0, // Set starting Slide (0 index)
+			directionNav:true, // Next & Prev navigation
+			directionNavHide:false, // Only show on hover
+			controlNav:true, // 1,2,3... navigation
+			responsive: true,
+			width: '100%',
+			height: '100% !important',
+			 afterLoad: function(){
+			 	$('.load-img').css({display: 'none'});
+			 	$('#slider').css({visibility: 'visible'});
+			 }			 
+		});
+	}); 
+</script>
+
+	</head>
+		<body id="top" class="lang-en">
+			<header >
+			    <div class="container" >
+				    					
+
+<div class="row">
+	<div class="col-sm-3 logo">
+		<a href="../index.html" title="Luxury Group Logo"><img src="../img/logo.jpg" alt="Logo" /></a>	</div>
+	<div class="col-sm-9 box-right">
+		<h1>LUXURY GROUP <br>
+			<span>PASSION FOR LUXURY HOTELS</span>
+		</h1>
+		<div class="lang">
+			<a href="Home/language/en" title="English"><img src="../img/flag-us.png" alt="US Flag" /></a><a href="Home/language/fr" title="French"><img src="../img/flag-fr.png" alt="Fr Flag" /></a><a href="Home/language/ch" title="Chinese"><img src="../img/flag-ch.png" alt="Ch Flag" /></a><a href="Home/language/ru" title="Russian"><img src="../img/flag-ru.png" alt="Ru Flag" /></a>		</div>
+		
+		<div class="clearfix"></div>
+		<!-- <div class="top_nav">
+			<ul>
+				<li><a href="/Hotels/View/ISwwYGAKYAo%3D" title="View Hotels For Americas &amp; The Caribbean">Americas &amp; The Caribbean</a></li><li><a href="/Hotels/View/ISxAYGAKYAo%3D" title="View Hotels For Europe">Europe</a></li><li><a href="/Hotels/View/ISxQYGAKYAo%3D" title="View Hotels For Asia, Australia &amp; Indian Ocean">Asia, Australia &amp; Indian Ocean</a></li><li><a href="/Hotels/View/IS1gYGAKYAo%3D" title="View Hotels For Africa &amp; The Middle East">Africa &amp; The Middle East</a></li>			</ul>
+		</div>-->
+        
+        <div class="search"><br> <div class="elementToFadeInAndOut" style="display:none"><a href="covid-19-testing-centers/"><img src="../img/luxury-group-covid-icon.jpg" width="225px" id="covid-image" ></a></div>
+			<script type="text/javascript" src="../js/jquery-ui-1.8.2.custom.min.js"></script>			<script type="text/javascript">		 
+				$(document).ready(function() {
+				    //console.log("asdasdas");
+					var $searchBox = $('#hotelsearch');
+					
+					$searchBox.autocomplete({source:'Hotels/Search',minLength:1,select:function(evt,ui) {
+						var ss=ui.item.value;
+						ss=ss.trim();
+						var ss=ui.item.value;
+						if(ss.indexOf("- ") >= '0') {
+							var ss = ss.replace("- ","");
+							var chk = 'City';
+						} else {
+							var chk = 'Country';
+						}						
+						var url = "Hotels/HotelListing/"+chk+"/"+ss;
+						var decodedUri =decodeURIComponent(url);
+						var urlm=unescape(decodedUri);
+						window.location.href=urlm;
+					}});
+					
+						
+	$("#hoverli").hover(
+    function () {
+        $('#actions_menu').finish().slideDown('fast');
+    });
+
+$(".container").hover(
+    function () {
+        $('#actions_menu').finish().slideUp('fast');
+    }
+);
+
+var messages=["A COLLECTION OF WORLD'S FINEST HOTELS AND RESORTS SINCE 1998","A COLLECTION OF WORLD'S FINEST HOTELS AND RESORTS SINCE 1998","A COLLECTION OF WORLD'S FINEST HOTELS AND RESORTS SINCE 1998"];
+var rank=0;
+
+// Code for Chrome, Safari and Opera
+document.getElementById("myTypewriter").addEventListener("webkitAnimationEnd", changeTxt);
+
+// Standard syntax
+document.getElementById("myTypewriter").addEventListener("animationend", changeTxt);
+
+function changeTxt(e){
+  _h1 = this.getElementsByTagName("h1")[0];
+  _h1.style.webkitAnimation = 'none'; // set element animation to none
+   setTimeout(function() { // you surely want a delay before the next message appears
+      _h1.innerHTML=messages[rank];
+      var speed =1.5*messages[rank].length/20; // adjust the speed (3.5 is the original speed, 20 is the original string length
+      _h1.style.webkitAnimation = 'typing '+speed+'s steps(40, end), blink-caret .75s step-end infinite'; //  switch to the original set of animation      
+      (rank===messages.length-1)?rank=0:rank++; // if you have displayed the last message from the array, go back to the first one, else go to next message
+    }, 1000);
+}
+	});		 
+			</script> 
+			<link rel="stylesheet" type="text/css" href="../css/smoothness/jquery-ui-1.8.2.custom.css" /> 
+            <label><a href="CityInformation.html#">Destinations:</a></label>
+			<div class="navbar-form navbar-left">
+							<div class="form-group">
+					<div class="input text"><input name="data[country_city]" class="form-control" size="24" placeholder="" id="hotelsearch" type="text"/></div>				</div>
+						</div>
+			
+			<!--<b><font color="white" family='Georgia, "Times New Roman", Times, serif' size='2px'>A COLLECTION OF WORLD'S FINEST HOTELS AND RESORTS  SINCE 1998.  BOOK DIRECT !</font></b>..>
+		</div>
+        <!--<div class="search-tagline"> <span style="color:#efb321">Enter DESTINATION / CITY or click on Continents below for list</span></div>-->
+ 
+        
+		 <!--<div class="new-menu">
+            <ul>
+                <li><a href="/Hotels/View/ISwwYGAKYAo%253D" class="">AMERICAS &amp; THE CARIBBEAN</a></li>
+                <li><a href="/Hotels/View/ISxAYGAKYAo%253D" class="">EUROPE</a></li>
+                <li><a href="/Hotels/View/ISxQYGAKYAo%253D" class="">AUSTRALIA, ASIA &amp; INDIAN OCEAN</a></li>
+                <li><a href="/Hotels/View/IS1gYGAKYAo%253D" class="">AFRICA &amp; THE MIDDLE EAST</a></li>
+            </ul>
+		</div>-->
+        <!--<div class="tag_line">A COLLECTION OF WORLD'S FINEST HOTELS AND RESORTS  SINCE 1998.  &nbsp;&nbsp;BOOK DIRECT !
+       </div>-->
+       <div class="tag_line"><div class="typewriter" id="myTypewriter">
+         <h1 class="tag" style="animation: 4.5s steps(40) 0s 1 normal none running typing, 0.75s step-end 0s infinite normal none running blink-caret;">A COLLECTION OF WORLD'S FINEST HOTELS AND RESORTS SINCE 1998</h1>
+</div><h3 class="elementToFadeInAndOut" style="font-size:1em;font-weight: 600;width:100%;text-align:center;margin-top:-7px;clear:both">BOOK DIRECT !</h3></div> 
+		<div class="nav_main">
+			<nav class="navbar navbar-default">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<em>Menu</em>
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li><a href="index.html">LOBBY</a></li>
+							<li><a href="destinations.html">DESTINATIONS</a></li>
+							<li><a href="JoinUs.html">HOTELIERS</a></li>
+							<!--	<li id="hoverli"><a href="/Home/destinations">DESTINATIONS</a>						<ul id="actions_menu" class="file_menu" style="display:none;">
+							   <div><a href="/Hotels/View/ISwwYGAKYAo%253D">AMERICAS & THE CARIBBEAN</a></div>
+							    <div><a href="/Hotels/View/ISxAYGAKYAo%253D">EUROPE</a></div>
+							    <div><a href="/Hotels/View/ISxQYGAKYAo%253D">AUSTRALIA, ASIA & INDIAN OCEAN</a></div>
+							    <div><a href="/Hotels/View/IS1gYGAKYAo%253D">AFRICA & THE MIDDLE EAST</a></div>
+							</ul> -->
+							
+							
+							</li>
+							<li><a href="CityInformation.html">CITY SCOOP</a></li>
+							<li><a href="CustomVacations.html">CUSTOM VACATIONS</a></li>
+							<li><a href="AboutUs.html">ABOUT US</a></li>
+							<li><a href="Contact.html">CONTACT</a></li>
+						</ul>
+			
+					<!--	<ul id="actions_menu" class="file_menu" style="display:none;">
+							   <div><a href="/Hotels/View/ISwwYGAKYAo%253D">AMERICAS & THE CARIBBEAN</a></div>
+							    <div><a href="/Hotels/View/ISxAYGAKYAo%253D">EUROPE</a></div>
+							    <div><a href="/Hotels/View/ISxQYGAKYAo%253D">AUSTRALIA, ASIA & INDIAN OCEAN</a></div>
+							    <div><a href="/Hotels/View/IS1gYGAKYAo%253D">AFRICA & THE MIDDLE EAST</a></div>
+							</ul> -->
+					</div>
+				</div>
+			</nav>
+		</div>
+	</div>
+</div>
+
+<div class="clearfix"></div>
+
+				</div>
+			</header>
+			
+			<script type="text/javascript">
+	function movetocity() {
+		var variable = document.getElementById('city_name').value;
+		window.location.replace('CityInformation'+variable);
+	}
+</script>
+<div class="container">
+<section class="about_us">
+	<div class="col-md-12 city">
+		<h1>CITY INFORMATION</h1>
+		<form>
+			<div class="form-group">
+				<select class="form-control" id="city_name" onChange="javascript:movetocity();">
+					<option value="#AMSTERDAM">AMSTERDAM</option>
+					<option value="#ATHENS">ATHENS</option>
+					<option value="#BALI">BALI</option>
+					<option value="#BANGKOK">BANGKOK</option>
+					<option value="#BARCELONA">BARCELONA</option>
+					<option value="#BEIRUT">BEIRUT</option>
+					<option value="#BERLIN">BERLIN</option>
+					<option value="#BRUSSELS">BRUSSELS</option>
+					<option value="#BUDAPEST">BUDAPEST</option>
+					<option value="#BUENOS AIRES">BUENOS AIRES</option>
+					<option value="#CAPE TOWN">CAPE TOWN</option>
+					<option value="#CAIRO">CAIRO</option>
+					<option value="#CARACAS">CARACAS</option>
+					<option value="#CHICAGO">CHICAGO</option>
+					<option value="#COPENHAGEN">COPENHAGEN</option>
+					<option value="#DUBAI">DUBAI</option>
+					<option value="#DUBLIN">DUBLIN</option>
+					<option value="#DAKAR">DAKAR</option>
+					<option value="#FLORENCE">FLORENCE</option>
+					<option value="#FRANKFURT">FRANKFURT</option>
+					<option value="#GENEVA">GENEVA</option>
+					<option value="#GLASGOW">GLASGOW</option>
+					<option value="#HONG KONG">HONG KONG</option>
+					<option value="#ISTANBUL">ISTANBUL</option>
+					<option value="#LAS VEGAS">LAS VEGAS</option>
+					<option value="#LISBON">LISBON</option>
+					<option value="#LOS ANGELES">LOS ANGELES</option>
+					<option value="#MADRID">MADRID</option>
+					<option value="#MARRAKECH">MARRAKECH</option>
+					<option value="#MELBOURNE">MELBOURNE</option>
+					<option value="#MEXICO CITY">MEXICO CITY</option>
+					<option value="#MIAMI">MIAMI</option>
+					<option value="#MILAN">MILAN</option>
+					<option value="#MOSCOW">MOSCOW</option>
+					<option value="#MUMBAI">MUMBAI</option>
+					<option value="#MUNICH">MUNICH</option>
+					<option value="#NEW DELHI">NEW DELHI</option>
+					<option value="#NEW YORK">NEW YORK</option>
+					<option value="#PANAMA CITY">PANAMA CITY, PANAMA</option>
+					<option value="#PARIS">PARIS</option>
+					<option value="#PRAGUE">PRAGUE</option>
+					<option value="#REYKJAVIK">REYKJAVIK</option>
+					<option value="#ROME">ROME</option>
+					<option value="#SALZBURG">SALZBURG</option>
+					<option value="#SAN FRANCISCO">SAN FRANCISCO</option>
+					<option value="#SHANGHAI">SHANGHAI</option>
+					<option value="#SINGAPORE">SINGAPORE</option>
+					<option value="#ST. PETERSBURG">ST. PETERSBURG, RUSSIA</option>
+					<option value="#STOCKHOLM">STOCKHOLM</option>
+					<option value="#SYDNEY">SYDNEY</option>
+					<option value="#TOKYO">TOKYO</option>
+					<option value="#VENICE">VENICE</option>
+					<option value="#VIENNA">VIENNA</option>
+					<option value="#ZÜRICH">ZÜRICH</option>
+				</select>
+			</div>
+		</form>
+		<h5 id="AMSTERDAM">AMSTERDAM</h5>
+		<p>Amsterdam, the Venice of the north never fails to excite. Built around water and waterways with Charming canals, old merchants' villas, the Jordaan's charming lanes and the lush Vondelpark are as magical now as in centuries past. The cafés are full, the museums are littered with Golden Age art and everyone still parties like there's no tomorrow. Amsterdam is a joy to visit any time of year. In summer there's an endless parade of festivals and events such as the Holland Festival, the Roots Music Festival and outrageous parades, as well as delightful concerts on canal stages.</p>
+		<p>Amsterdam is more than just museums and canals, it's an exciting living testament to tolerance. A multi-culti paradise for numerous ethnic groups, sexuality and politcal and social beliefs. In the midst of stag parties and red light district online entrepreneurs engage in business deals across Europe and the world.</p>
+		<p>Home to RAI, Europe's major conference and business hub. Amsterdam deals with tourists as it has dealt in world trade over the centuries. The cities canals and waterways accommodate not only canal boats but also cargo ships and cruise lines from all over the world. It all started by the damm on Amstel river in the 13th century which led to the creation of this wonder city. The cities acquatic location is its lifeblood, close to North Sea and built on charming canals, 165 of them which are present through out the city and give it a small town feel.</p>
+		<p>Vondel park is a favourite haunt in the summer where locals and visitors gather to eat, drink, skate, bike and picnic. There are numerous cafes and restaurnats inside Vondel park as well as concerts. Being highly susceptible to rain and clouds, at the slightest hint of a sunshine locals pour into the streets to take in the rays while enjoying a drink or lunch at the countless outdoor cafes and restaurants.</p>
+		<p>A canal cruise perhaps with dinner is highly recommended and no visit to Amsterdam is complete without a bicycle ride, city's preferred mode of transportation.</p>
+		<p>Amsterdam is a year round tourist destination with countless access via air, rail and water. Bundle up if you go during winter months, but expect a beautiful friendly city rain or shine.</p>
+
+		<h5 id="ANTWERP">ANTWERP</h5>
+		<p>Home to fashion moguls, diamond dealers, night owls , art lovers and diamond dealers, Belgium's coolest and second biggest city revels in fame and fortune. Antwerp is not to be missed when visiting Europe. Cosmpolitan, confident and full of variety, Antwerp does not disappoint.</p>
+		<p>Antwerp is easily navigated on foot as well as on wheels. The old city centre, built around the country's most impressive cathedral, is as beautiful and intimate today as it was centuries ago. Antwerp is home to thousands of restaurants and bars, antique shops, art galleries, exclusive chocolate outlets, designer boutiques and diamond shops where the locals enjoy spending money.</p>
+		<p>The whole city feels like an architectural museum, from the medieval riverside fortress to modern waterfront creations and the famous Cogels-Osylei. Most distinctive is its Gothic and Flemish baroque architecture, it was the home of Pieter Paul Rubens, northern Europe's greatest baroque artist. A visit to his home and studio in the city centre gives fabulous insight into the painter's personal life and his works can be found in museums and churces around the city.</p>
+		<p>Antwerp although relatively small is a fashion center and a magnet for shoppers. For a city of its size, it boasts an incredible number of world famous fashion designers and many have set up boutiques here. Designer stores buzz with shoppers looking for the latest in hip clothing and accessories.</p>
+		<p>On the backbone of the fashion and increasing hip scenes, Antwerp's club culture has bloomed. Fabulous Clubs burst out in summer and the nightly scene in the regenerated docklands to the north and south of town beat all night long.</p>
+		<p>Antwerp is the world's largest diamond cutting center and it operates behind discreet faÇades in the Jewish neighbourhood. This exciting port city attracts sailors from such far away places as The Phillipines, Sri Lanka and East Europe. Turkish, African and Chinese communities live northwest of Franklin Rooseveltplaats, ultratrendy fashionistas have taken over the fashion district, and businessmen and upper-class Flemish can be found around Koning Albertpark.</p>
+
+		<h5 id="ATHENS">ATHENS</h5>
+		<p>The city is named after goddes of wisdom, Athina, who, according to legend, won the city after defeating Poseidon in a duel. The goddess' victory was celebrated by the construction of a temple on the Acropolis, the site of the city's earliest settlement in Attica. As a city state, the coastal capital of Athens reached its peak in the fifth century BC. The office of the statesman, Pericles, between 461BC and his death in 429BC, saw an unprecedented spate of construction resulting in many of the great classical buildings (the Parthenon, Erechtheion, Hephaisteion and the temple at Sounion) now regarded as icons of Ancient Greece.</p>
+		<p>Modern Athens was born in 1834, when the city was restored as the capital of a newly independent Greece. Greek refugees flooded the city at the end of the Greek-Turkish war, swelling the population.</p>
+		<p>The city boasts Byzantine, medieval and 19th-century monuments, as well as one of the best museums in the world and areas of incredible natural beauty. Despite heavy traffic, a charming village-like quality becomes evident in the cafes, tavernas, markets and the maze of streets around the Pláka.</p>
+		<p>Physical evidence of the city's success was matched by achievements in the intellectual arts. Democracy was born, drama flourished and Socrates conceived the foundations of Western philosophy.</p>
+		<p>Remarkably, although the cultural legacy of this period has influenced Western civilisation ever since, the classical age in Athens only lasted for five decades. Under the Macedonians and Romans, the city retained a privileged cultural and political position but became a prestigious backwater of the Empire rather than a major player.</p>
+		<p>The birth of Christianity heralded a long period of occupation and decline, culminating in 1456 and four centuries of Turkish domination, which has left an indelible cultural mark on the city. By the end of the 18th century, Athens was also suffering the indignity of having the artistic achievements of its classical past removed by looting collectors.</p>
+		<p>After WWII, American money funded a massive expansion and industrialisation programme. The rapid growth of the post-war years and the high temperatures of its Mediterranean climate have created a city that can often be polluted and could be described as an urban sprawl. Excessive traffic creates gridlock on the streets and noxious fumes (nèfos) in the air, although great efforts are being made to reduce this.</p>
+		<p>Visitors with visions of gleaming marble and philosophers in white robes are understandably perturbed that the architectural achievements of Athens' classical past are surrounded by the unforgiving concrete of indiscriminate 20th-century urbanisation. Over 3 million visitors come to the city each year to take in the ancient sights and to enjoy the breathtakingly beautiful Greek islands.</p>
+		<p>Moreover, Athens has the finest restaurants and the most varied nightlife in the country and remains a major European centre of culture, celebrated each year at the Athens Festival. The metropolitan area, including the port at Piraeus, are the industrial and economic hub of the country, while the return of the Olympic Games in 2004 prompted a flurry of new development, including a new airport, the extension of the metro system, the building of new sports venues, the upgrading of hotels, the renovation of several top museums, and the formation of a traffic-free 'archaeological promenade'.</p>
+
+		<h5 id="BALI">BALI</h5>
+		<p>The self-styled 'Ultimate Island' has plenty to recommend it for everyone, from those looking for a relaxing beach holiday through to a cultural journey. It is a dramatic holiday paradise of rolling rice paddies, tropical rainforest and sweeping beaches, topped with hulking volcanoes. Added to the natural attractions of this island are a sprinkling of resorts that ring the coastline offering a wealth of world-class facilities and hotels. One of the world's largest Hindu communities add their own local colour with lively processions and a flurry of temples, many set at some of the island's most dramatic locations.</p>
+		<p>With year round warmth the majority of visitors are Australians and Western Europeans. Traditionally Bali's buzzing southern resort of Kuta pulls in a younger 18-35 year-old crowd, but they have been joined in the last decade or so by families attracted to the well-equipped and quieter resorts of Sanur and Nusa Dua</p>
+
+		<h5 id="BANGKOK">BANGKOK</h5>
+		<p>Bangkok is a city that really is larger than life. Some hate it and some love it, but all agree its one of a kind city with no rival anywhere in sight. For some, the frantic pace, heat, traffic and lack of personal space can be overpowering and are good reasons to pass through the city as quickly as possible but, for many others, the sheer dynamism is intoxicating.</p>
+		<p>A curious blend of the traditional East with the modern West, Bangkok's every street has a surprise in hold for the visitor. Ramshackle buildings crouch next to exotic temples surrounded by delightful gardens, which are in turn overlooked by modern hotels and offices.</p>
+		<p>The chaos on the roads is mirrored by the busy traffic on the Chao Phraya River, which dissects the city and is regularly crisscrossed by long-tailed boats, river taxis and small rowing boats, all miraculously missing each other.</p>
+		<p>But traditional Thai life is never very far away. Weaving among the nose-to-tail traffic in the morning rush hour, saffron-robed monks can still be seen collecting alms, while just moments from the city centre whole communities live in stilt houses by the river, eking out a living using skills that have not changed in centuries.</p>
+		<p>Bangkok became the capital in 1782, but the absolute rule of the monarchy ended in 1932 when it was replaced by a system of constitutional monarchy. To this day, the monarchy is regarded with almost religious reverence and it is an offence, punishable by imprisonment, to insult the royal family. His Majesty King Bhumibol is the longest-reigning monarch in the world, having come to power in 1946.</p>
+		<p>Thailand is a tropical country so it is hot throughout the year, but the best time to visit is between November and March, during the dry season. During the rainy season, humidity is very high and the downpours are short but violent and the streets of Bangkok often flood.</p>
+
+		<h5 id="BARCELONA">BARCELONA</h5>
+		<p>Some claim it was the Olympic Games of 1992 that brought the world's attention to this magnificent city, others count it to Gaudi architecture, whatever the reason, this once rundown industrial centre, which seemed to have little to offer, has undergone dramatic change and it's become a highly desirable destination.</p>
+		<p>Barcelona has long been a destination of choice for architects who have flocked here to admire a variety of modern structures and avant-garde designs. Many have drawn their inspiration from the seminal work of Barcelona's most famous son, the modernist architect Antoni Gaudi, whose unique style can still be savoured in a number of key buildings around the city. Gaudi's masterpiece is the unfinished Sagrada Familia cathedral, but his work can be seen even in the lampposts and fountains of Plaça Reial.</p>
+		<p>Although many new structures have been erected, still the older buildings are quite evident, as the old and new architectural styles harmoniously exist. In Barcelona contemporary glass and steel office tower can rest happily within striking distance of a gothic cathedral. The enduring charm of Barcelona is present all over this lovely city and no effort is spared in maintaining the old charm as evidenced by the old port which has been rejuvenated without losing any of its old world feel.</p>
+		<p>The capital of Calalunya Barlcona is also an economic hub, resting near the French border and a large Mediterranean coastline. Its key industries include electronics, manufacturing, textiles, and of course tourism. The number of tourists visiting Catalunya in 2006 exceeded 15 million. Economy of Barcelona is on the expansion and with only 4% of the Spanish population it has managed to contribute over 14% to the country's gross domestic product.</p>
+		<p>There are no shortage of fantastic restaurants, cafes and Tapas bars where one may still hear some locals talking about their desire for an independent Catalan state, but such desires have</p>
+		<p>Somewhat lessened since the death of the famed General Franco and the increased autonomy that the region has been granted by the Spanish government.</p>
+		<p>With mild year round climate and increasing flights by full fare and discount carriers to the region, more and more tourists find Barcelona an ideal short vacation spot.</p>
+
+		<h5 id="BEIRUT">BEIRUT</h5>
+		<p>Beautifully reconstructed colonial relics, mosques in central Beirut's Downtown and enternal new construction is testament to this city's triumph of rejuvenation over disaster. The young vibrant neighbourhoods of Gemmayzeh or Achrafiye is strong evidence of this observation. Beirut residents believe in living for the moment, eating, drinking, partying like there is no tomorrow. Armenians, Muslims and jews live side by side although not without occasional flare ups of tension. The refugee camp in the south still reminds us that the lingering problems over the border have not yet been completely resolved. Nearly routine Political demonstrations are a reminder of that.</p>
+		<p>With all these factors coexisting Beirut the capital of Lebanon is a hub for some of the best chefs of Arabic and Phoenician food, colorful music, art galleries, museums and culture.</p>
+		<p>Head atop the hill to the Junieh district for gambling with a view of the city. Brace yourself for some of the world's most wildest drivers, friendliest warm and sweet people and mouth watering food and sweets.</p>
+		<p>World-class universities, bars, restaurants and thick Arabic coffee. Beirut is very much alive and worth a visit.</p>
+
+		<h5 id="BERLIN">BERLIN</h5>
+		<p>Berlin, once again is the capital of Germany and back as one of Europe's greatest - and most vibrant - cities. After WWII, Berlin was a crippled pawn, caught between East and West, with a literal and metaphorical wall deeply dividing the two halves. The northeastern German city even suffered the ignominy of losing its capital status, as the West German government fled to Bonn. Today, the Cold War and the iconic events of November 1989, which saw the Berlin Wall torn to pieces by those whom it had oppressed for so long, are starting to seem like a distant memory and Berlin is looking forward.</p>
+		<p>In the biggest construction project in Europe since WWII, a new Berlin has emerged from the forest of cranes dotting the no-man's land that was the divided city's dead heart. Potsdamer Platz is the most voluminous project but the most symbolic recent construction is at the Reichstag. British architect Norman Foster has rejuvenated the German parliament with an impressive glass dome that symbolises the new transparency in German politics - that of a nation with nothing to hide, which is attempting to distance itself from the ghosts of its past.</p>
+		<p>Coupled with this wave of recent construction is a city laden with historical charm - from the old streets of East Berlin, which are slowly being restored after remaining unchanged for 50 years, through to the grand architecture of Museumsinsel and Unter den Linden, and the green lung of the Tiergarten Park.</p>
+		<p>Tourism is on the rise, as visitors come to savour the intoxicating mix of old and new. Big business, too, is booming and key industries such as electronics, manufacturing and information technology reflect the dynamism of the German economy.</p>
+		<p>Contrary to the usual cliches about Germany, Berlin is a city with a laid-back attitude and some of the liveliest nightlife in Europe. In Berlin today, there is everything from authentic beer halls and old Soviet era haunts right through to buzzing style bars and Latino nightclubs.</p>
+		<p>Berlin's climate is equally eclectic, with hot summer days giving way to occasionally freezing temperatures during the long grey winter. Today's quintessential Berlin experience is to laze through a summer day in the Tiergarten with the murmur of construction just out of earshot, sipping on a chilled Pilsner beer, while absorbing the rush and hum of one of Europe's finest capitals.</p>
+
+		<h5 id="BRUSSELS">BRUSSELS</h5>
+		<p>The Capital of the European union and Belgium, Brussels (Bruxelles in French, Brussel in Flemish) is a delight to experience. This land locked city, bordered by The Netherlands, Germany, Luxembourg and France, is a multicultural and multilingual city at the very heart of the EU. Narrow cobbled streets lead you to the breathtaking Grand-Place, with its ornate guild houses, impressive Town Hall and buzzing atmosphere. It is difficult to find a more stunning square in the whole of Europe. Bars, restaurants and museums are clustered within the compact city centre, enclosed within the petit ring, which follows the path of the 14th-century city walls.</p>
+		<p>The medieval city is defined by its narrow, labyrinthine streets, making it easy to distinguish the later additions, such as Léopold II's Parisian-style boulevards (Belliard and La Loi) today lined with embassies, banks and the grand apartments of the affluent and close to the glitzy new EU quarter. The working class still congregates in the Marolles district, in the shadow of the Palais de Justice, although this area is rapidly improving. New immigrant communities are settling in the rundown area around the Gare du Nord. Neighbouring area, St-Gilles and Ixelles, appeal to the artists crowd with their hip shops and restaurants. These are worth the trip to take in the some of Brussels' finest art nouveau buildings, the style developed by Bruxellois Victor Horta, the son of a shoemaker.</p>
+		<p>Brussels has been a major trade center since the middle ages and celebrated its 175th anniversary of statehood in 2005. The people of Brussels have lived under the influence of Romans, Spaniards, Austrians, French, Dutch and Germans and have only had their independence since 1830. Of the 10.5 million who inhabit in Belgium, Brussels boasts just over a million of them.</p>
+		<p>With a mild climate - warm summers and mild winters - and a host of sights and delights to entertain, Brussels offers the visitor much more than fabulous chocolates and beer. Some have referred to it as the baby Paris, but Brussels takes second seat to no one. A combination of French and Flemish is spoken in Brussels with 85% using French as their first language. Ironically, Brussels is also capital of Flemish-speaking Flanders.</p>
+
+		<h5 id="BUDAPEST">BUDAPEST</h5>
+		<p>From the days of communism just over two decades ago, Budapest has come a long way. Home to beautiful architecture and fantastic attractions, Europeans and visitors from all over the world are flocking to Budapest.</p>
+		<p>Budapest was born in 1873 with the joining of Bua, Obuda and Pest. The city is divided into 23 districts called Keruletek designated by Roman numerals I to XXIII. Buda and Pest are still distinct places on either side of the river. Buda is on the west with narrow cobbled streets and medieval and neoclassical buildings nearly completely reconstructed after World War II. Pest is flat on the east side of the river with wide boulevards and art nouveau structures. Evidence of Turkish and Communist occupation makes for a combination of styles in this truly unique city. The Turkish victory over the Hungarians in 1526 with the ensuing rebuilding of Buda as a Turkish capital has left its mark on the city and the Hapsburg rule that continued, deprived Hungary of its autonomy until 1867. Budapest and Hungary suffered the devastation of WWII and the Russian control which only lifted in 1989.</p>
+		<p>Budapest is the proud survivor of alternate periods of great wealth and prosperity and devastating eras of political and social upheaval. The Magyars view their history not in black and white but in gold and silver. The first Golden Age coincided with the reign of Renaissance King Matyás (1458-90). The second Golden Age was symbolised by the 1896 millennium celebration in City Park and the Silver Age was the 20th-century inter-war period, when the likes of Evelyn Waugh and the Prince of Wales frequented Budapest's spas and casinos.</p>
+		<p>Their tumultuous history has turned the Hungarians into an adapting and resilient race, proud of their national heroes. Athough its true that the young generation of this city of nearly 2 million are eager to accept Western European values, they still maintain a deep relationship with Hungary's fascinating past and value the culture and history of the Magyar people deeply. This makes Budapest a wonderful mix of past and present, and also the commercial, cultural, political, intellectual capital of Hungary</p>
+
+		<h5 id="BUENOS AIRES">BUENOS AIRES</h5>
+		<p>Often referred to as Paris of latin America, Buenos Aires is the latin American city with the most European feel. With wide boulevards, leafy parks, grand buildings and varied culture and nightlife Buenos Aires is one the world's most attractive desinations. The porteños ('people of the port'), as the residents of Buenos Aires are called, are mostly of European ancestry, descendants from the first Spanish founders and Italian immigrants from the 19th century. Their culture and cuisine still flavours the city and can be enjoyed in countless art galleries, theatres and museums, as well as fine restaurants. But the city has also spawned its own art forms, notably the tango, for which Buenos Aires is famous.</p>
+		<p>Buenos Aires is the third largest city in South America and comprises 47 barrios (neighbourhoods) in which nearly 3 million people live. Situated in the east of Argentina beside the Rio de la Plata and surrounded by seemingly never-ending flat land known as the Pampas, the vast sprawling conurbation is a true non stop city - there is always something going on to fill the senses. The downtown area is as noisy and congested as any other major urban centre, but the city is really a pleasant place to walk around.</p>
+		<p>The Argentine economy it seems is on a constant roller coaster of ups and downs. Large numbers of people still live in shanty towns (villas miseries) and families of cartoneros (cart people) take to the city streets at nights to rummage through bins for items to sell for recycling. Despite the precarious nature of their economy the porteños continue to get on with life as best they can. There are still great numbers of people who can't afford life's luxuries, but the city's classy restaurants, bars and cafes are often filled with people and the city's elite dance the night away in South America's best clubs.</p>
+		<p>The currency devaluation has made it a bargain city to explore and enjoy. Visitors can enjoy sightseeing and shopping by day and dancing and enjoying gastronomic delights at night. With several new museums and a continuous agenda of cultural attractions and events, there is much to see and do. Buenos Aires has a mild climate and is a year-round destination. The city can get very hot and humid during the summer months (December to February). The locals take their holiday during the summer months making the city quiet.</p>
+
+		<h5 id="CAPE TOWN">CAPE TOWN</h5>
+		<p>Cape Towns amazing location nestled into the arms of a broad bay, surrounded by wild, white-sand beaches and set against the canvas of Table Mountain, is one of the most beautiful cities in the world. Affectionately nicknamed the Mother City, it is the capital of South Africa's Western Cape Province and the seat of South Africa's parliament.</p>
+		<p>It was home to the nomadic Khoi people originally for at least 30,000 years, the Cape Peninsula was first settled, on 6 April 1652, by Dutch sailors led by Jan van Riebeek of the Dutch East India Company. Portuguese explorer Bartholemew Diaz had already discovered the Cape in 1488 and christened it Cabo Tormentoso (Cape of Storms), but Portugal's King John II later renamed it 'Cape of Good Hope' in reference to the opening of the sea route to India and the east via southern Africa. In 1795, it became a British colony, when the British Empire extended its borders. The city has been the first port of call for many a European settler, entrepreneur and religious refugee, as well as for Indian, Madagascan and South-East Asian slaves. All these people interspersed with the local Khoi and Xhosa population and the city became a melting pot of cultures, religions, styles and traditions. A great variety of languages are spoken, while stalls selling all manner of crafts, food and textiles are squashed among American-style malls, European fashion boutiques, art galleries, luxury hotels, backpacker lodges and the ubiquitous chain stores.</p>
+		<p>In summer, it's difficult to escape the glitz of the international media. Film crews, fashion shoots, music videos and commercials, are lured to the city by great bargain the exchane rate offers and the exotic location, the world-class infrastructure and seemingly endless supply of drop-dead gorgeous models and extras</p>
+		<p>These days, traders from other African countries , such as Malawi, Zimbabwe, Ethiopia and Nigeria also favour Cape Town, particularly because there are so many tourists there. The city has a reputation for being the least xenophobic and most welcoming city in South Africa, with a strong diversity and open-minded benevolence. Capetonians are proud of their easygoing and laid-back nature, jokingly known as the 'Cape coma', so different from their more frenetic counterparts in the north.</p>
+		<p>Some legacy of apartheid remains as evidenced by the shanty towns visitors are exposed to first when riding from the airport to the city. A remnant from the days of the notorious Group Areas Act, which reserved the prime land in the middle of the city for whites only. Even now, relatively few non-whites live in the more upmarket suburbs, although some of the former townships are gradually turning into middle-class estates, and construction of large areas of low cost housing is underway as the economic situation improves.</p>
+		<p>The stunning natural beauty spreads out from Cape Town, to the south, the impeccable beaches of the Cape Peninsula are fringed with pretty towns and mansions ending in the southern reaches of the beautiful Table Mountain National Park (formerly the Cape Point nature reserve). To the east lies the mysterious magnificence of the Overberg, where there are rolling plains, deserted beaches and the lofty mountains of the Southern Cape. To the north and northwest, the misty and severe splendour of the West Coast, the austere wilderness of the Cedarberg and the verdant valley of Ceres await the traveller.</p>
+		<p>Cape Town is not be enjoyed only in the summer, which occurs from December to February but it is also very pleasant all year round. Summer brings long, hot beach days and balmy outdoor evenings, but they could also be described as sweltering and overcrowded and there is the chance of the legendary strong 'southeaster' wind. Spring (September to November) brings blooms of flowers, while autumn (March to May) promises a golden haze of warm days.</p>
+		<p>Winter months are June thru August and they can be wet and often cold, however there are often weeks that are both warm and clear. The city is mostly devoid of tourists and wonderfully green; dolphins and whales stop in the many small bays along the coastline, and the most spectacular sight of this 'secret season' - the waterfalls streak silver paths down the mountains. Enjoy the fabulous local wine and the seafood such as the king clip fish.</p>
+
+		<h5 id="CAIRO">CAIRO</h5>
+		<p>The Mother of All Cities is how the Egyptians call their capital .</p>
+		<p>There are many sides to Cairo. There are the pyramids of Giza, so iconic as to be beyond description. There is the astonishing gold of Tutankhamen, buried in the dusty upper corridors of the Cairo Museum. And there are the Islamic treasures of bejewelled mosques and sacred places of learning. For many people, however, the best of the city is experienced not through the iconic spectacle of ancient monuments, great though they are. Even more memorable perhaps is the morning coffee with traders in Khan al-Khalili bazaar, the glance of the midday sun off a piece of polished brass, or the call of a nation to prayer at sunset.</p>
+		<p>It's no coincidence that Misr in Arabic means both Cairo and Egypt. The capital is a magnet that draws people from the Nile Valley towards the promise of a better life. The city dominates Egypt as it dominates Arabic culture. And what gives it this life blood? It's undoubtedly something to do with the Nile, as it quietly threads through fashionable suburb and island allotment, past the mausoleums of the dead now occupied by the living and alongside luxury hotels and floating palaces of pleasure.</p>
+
+		<h5 id="CARACAS">CARACAS</h5>
+		<p>Caracas lies between the sunny coastline and high rolling mountains. It's a bustling city of tangled motorways, many cars, tall skyscrapers, modern architecture and lively culture. Birthplace of South American independence hero Simón Bolívar, it is a city inordinately proud of its past, but with its eyes set on the future financed by the nations vast oil reserves.</p>
+		<p>Caracas has a lively and vibrant night life with energetic night clubs, bars and open-air cafés. The locals take their dinining very seriously hence the astonishing array of cuisines on offer, from international gourmet cuisine to local meals and freshly cooked street fare. You'll also find a broad range of hotels, a string of excellent attractions, a colorful arts scene. You will also find many giant shopping malls filled with shoppers as shopping is a much loved obsession by the locals.</p>
+		<p>Stong caution is advised as political unrest and crime have been serious problems in Caracas making some parts of the city no go zones. Signs of poverty is omnipresent such as homeless families camping outside corporate skyscrapers and fancy malls. When it dark it easily goes unnoticed that those shimmering lihgts in the mountains are coming from the sprawling shanty towns which cover the mountains. But the mountains are also an escape from the city's constant noise and hustle, with the blissfully serene Parque Nacional El Ávila looming directly over north Caracas, its slopes riddled with walking trails and home to a cable car leading to vista points atop mountains with panoramic views of the city.</p>
+
+		<h5 id="CHICAGO">CHICAGO</h5>
+		<p>The Windy City. The impressive skyline of Chicago erupts from the western shores of Lake Michigan and is evident through out this truly unique metropolis. The city is host to a world of ethnic and religious diversity, world-class educational institutions and shopping, plus commerce and industry.</p>
+		<p>It is also a place of raging winters and seductive summers, crowded highways and tranquil parks, famous people and friendly people alike. Eternally in competition with New York it might be called the 'Second City', but its spirit is second to none. All year round, there are festivals, exhibitions, parades and full programs of theatre, dance, art and all types of music, including a world-class symphony. Chicago is one of the most culturally diverse cities in the world. Over 50 languages are spoken here. The city's various annual ethnic parades is a testament to its multitude of cultures.</p>
+		<p>The original American Indians names this city Checaugou, after the River Checaugou (Chicago River), which flowed into Lake Michigan. The translation of the world is 'strong' or 'great' and modern-day Chicago certainly lives up to this heritage</p>
+		<p>The famous Art Institute is home to an extraordinary collection of French Impressionists, as well as American artist Grant Wood's classic work, American Gothic. The museum of contemporary arts contains such works by René Magritte and Andy Warhol. Ernest Hemingway was born suburb city of Oak Park. Because of its strategic location, Chicago became famous as a hub for roads, canals, railways and aircrafts. In the 1920s, during Prohibition, gangsters like Al Capone and police adversaries like Eliot Ness made it notorious.</p>
+		<p>A amazing city that grew from a village of 350 people in 1830, to the growing nation's 'Second City' (to New York), capable of hosting the 1893 World's Columbia Exposition, which attracted 26 million visitors during its six-month run. The Exposition was the culmination of a phoenix-like recovery from the great fire of 1871, which leveled the central business district and left about 100,000 people homeless. World famous architects Louis Sullivan, Mies van der Rohe and Frank Lloyd Wright and his Prairie School of Architecture, grew to fame here. The city's most recent contribution to architecture and art is Millennium Park. The park is the setting for the works of Frank Gehry, Jaume Plensa and Anish Kapoor.</p>
+		<p>The modern city focuses around an area known as the Loop, where the raised metropolitan railway known as EL circles the central downtown business and shopping district. The east side of the city faces Lake Michigan.</p>
+		<p>Unlike the past when it relied on heavy industries of steel production or meatpacking. These days, its communications, information technology and financial institution as well as research and development both in commerce and in its academic faculties that it leans towards. Chicago is still a main hub for commodities and futures trading and exchanges.</p>
+
+		<h5 id="COPENHAGEN">COPENHAGEN</h5>
+		<p>The port of Baltic Copenhagen is made up of canals, lakes and the sea. e city's heritage as a major Baltic port. The city's name, København, a mixture of købmanne hafen or merchants' harbour.</p>
+		<p>The city's foundation dates back to 1167, when Bishop Absalon built a bastion on the island of Slotsholmen, today the site of Christiansborg Palace and the Danish parliament. In 1417, the city became the royal capital of a huge swathe of Scandinavia that included not just Denmark but parts of Sweden and Norway. Many of Copenhagen's most impressive buildings were constructed during the celebrated reign of Christian IV (1588-1648). Existing monuments of the monarch's grand building schemes include the Børsen (Stock Exchange), the Rundetårn (Round Tower) and the Palace of Rosenborg.</p>
+		<p>Christian IV was responsible for Copenhagen's canal network and for the development of Christianshavn (an island across the inner harbour) as a focus for trade and shipping in the city. In the following centuries, an outbreak of plague, two terrible fires and military attacks by the Swedes (in the 17th century) and the British (in the 19th century) caused widespread damage to the city. The central area of Copenhagen is therefore characterised by 17th-, 18th- and 19th-century architecture - buildings constructed on the foundations of the medieval streets.</p>
+		<p>Modern Copenhagen is the largest city in Scandinavia but nevertheless retains a disarmingly provincial, small-town atmosphere that is instantly appealing. Gabled houses, narrow streets and a skyline that is dominated by delicate spires rather than hulking skyscrapers are all typical of the city. Copenhagen is also, arguably, the greenest capital in Europe - much of the centre is reserved for pedestrians, strict anti-pollution laws are enforced and bikes often outnumber cars on the streets. Green spaces (including the world-famous Tivoli) abound, while, in the summer, cafes and restaurants occupy the pavements. The citizens of Copenhagen seem justifiably proud of their attractive, well-kept city and enjoy a quality of life that they are keen to share with visitors from other countries.</p>
+		<p>Copenhagen boasts theatres, museums and a lively, surprisingly cutting-edge nightlife scene. Danish cinema is making its mark on the international film circuit, and Danish furniture, technology and jewellery remain at the forefront of contemporary design. The best the country has to offer can be experienced in the capital city, where design studios rub shoulders with ultra-hip bars, and modern architecture boldly occupies the space between 17th-century buildings, military installations and the sea. A road bridge to Sweden, completed in 2000, is helping to make Copenhagen a key focal point for Scandinavia, the Baltic and the rest of mainland Europe.</p>
+		<p>The climate in Copenhagen is a temperate maritime one and generally quite changeable. Winters are cold and cloudy but summers are warm and sunny. Snowfalls are common between January and March and the wettest season is over the months of August to October</p>
+
+		<h5 id="DUBAI">DUBAI</h5>
+		<p>Dubai cannot be easily described in words, but Las Vegas on steroids is a beginning.</p>
+		<p>championship golf courses in the desert, massive manmade islands in the shape of the world and indoor ski slopes inside of a shopping mall is just the beginning.</p>
+		<p>Who would believe that several decades ago Dubai was little more than a desert where Bedouin tribes roamed the sands and a huddle of settlers crowded around the banks of the lifeblood creek. Dubai had no running water, or paved roads until some 50 years ago and camels were the normal mode of transportation.</p>
+		<p>A hub on the ancient trading route between Mesopotamia and the Indus Valley, by the 19th century, a small fishing village had taken root at the mouth of Dubai Creek. The village was inhabited by the Bani Yas tribe, who were led by the Maktoum family, the dynasty that still presides over Dubai today.</p>
+		<p>The city's fantastic success story began in the 1960s. While coming out of the British colonial rule, oil was struck in 1966 and Dubai has never been the same. Since the 1960s, the population has mushroomed to almost 1.5 million and now an ever-growing number of hotels welcome in the temporary expat workers and tourists who help propel the economy. Approximately 25% emirate's population are actually ethnically Emirati in a population mixture that has to be one of the world's most ethnically diverse.</p>
+		<p>Dubai's development has been fast and unprecedented, with sweeping skyscrapers and gleaming office blocks rising up everywhere. The rulers of Dubai have a penchant for grand projects - from the world's tallest tower (Burj Arab), to a string of offshore manmade islands (the three Palms and the World) and now Dubailand, a massive project that will bring over 45 major projects to a massive leisure oasis in the desert. The world's largest shopping mall and the super new airport are nearly completed. With all this modernity the traditional side of town such as old souk and the gold bazaar still very much exist and are vibrant and sought after shopping destination for locals and tourits alike.</p>
+		<p>The climate guarantees constant sunshine and blue skies. A haven for sun starved from all over the world. Summer temperatures can easily reach 50 degrees Celsius.</p>
+
+		<h5 id="DUBLIN">DUBLIN</h5>
+		<p>The Dublin of today is a city on the rise and rise. Business in many sectors continues to boom and the city overflows with tourists, who flock to the 'party capital of Europe' to sample the infamous Irish craic (fun).</p>
+		<p>This vibrant, party city on the River Liffey is full of atmospheric pubs where the craic is spun with a well-polished finish and the streets echo with the ghosts of artistic luminaries such as James Joyce and W B Yeats. Visit between April and October, when the weather is at its best, with July and August the busiest months, or throughout the year for the numerous festivals, cultural and religious events and sporting fixtures.</p>
+		<p>Sightseeing highlights include the early medieval Christchurch Cathedral - Dublin's oldest building - the cobbled streets of Temple Bar, Phoenix Park (Europe's largest urban park), the National Gallery of Ireland and the treasures of the National Museum of Ireland, containing Europe's best collection of prehistoric gold artefacts. A plethora of buildings and museums (including Trinity College, Ireland's oldest university, and the Guinness Storehouse) convey a real sense of living history.</p>
+		<p>Indeed, it is this living history, present in the media of music and literature, which has brought Dublin such international fame. In the 20th century, a string of poets and writers immortalised the city, none more so than James Joyce whose seminal Ulysses (1922), which depicts one day in Dublin, is considered by many literary critics to be the greatest novel of that century.</p>
+		<p>For much of the first half of the 20th century, strife and unrest tore Dublin apart as it was involved in a messy and violent separation from Britain.</p>
+		<p>Today's new Dublin, the 'capital of Euro-cool', continues to boom, and boasts one of the youngest populations in Europe, who frequent its funky bars, sophisticated restaurants and rebuilt city streets.</p>
+		<p>However, despite the recent changes, the city and its people have remained the same. Alongside trend-setting bars, clubs and fashion shops it is still possible to find quiet, traditional pubs, nostalgic museums and busking fiddlers in Temple Bar, even horse-drawn carts clip-clopping along cobbled streets. It is a fascinating blend of tradition and contemporary Irish life.</p>
+
+		<h5 id="DAKAR">DAKAR</h5>
+		<p>Dakar is a feverish city that brims with life. The capital of Senegal located on the Cape Verde peninsula, it's the western most Afican city. With a population of 2.45 million it's a city of screeching traffic, exuberant nightlife, lively markets, street hustling and boundless creativity. Home to sophisticated french cuisine thanks to the strong French influence and history in this land. It's has some of the best nightclubs, live venues, and film, music and arts festivals in the whole of West Africa. You will rarely be at a loss for things to do in Dakar. You will encounter unwanted hassle and sly con-jobs, but they're easily negotiated by learning a few manuvers. Magnificent beaches in Dakar and nearby resort city of Saly attract visitors from all over the world, but specially the French and Europeans. Home to the famous Dakar rally. Mesmerizng music from local artits. Visit island of Goree the famous port where slaves were shipped off to the west.</p>
+		<p>Dakar is a major financial center and home to dozen national and regional banks. Its also home to international organizations. It enjoys a large Lebanses community concentrated in the import - export sector that dates back to the 1920s a community of Moroccan business people as well as Mauritian, cape verdian and Guinean communities. France still maintains an airforce base at Yoff and the French fleet is serviced in Dakar's airport.</p>
+		<p>Islams influrnce is strong however secularism assures a pleasant and cosmopolitan city which is one of the best managed and run in all of Africa. Visitors to Dakar find themselves returning again and again to this most wonderful city and its warm people.</p>
+
+		<h5 id="FLORENCE">FLORENCE</h5>
+		<p>Florence is a feast for the eyes, so many good looking people in such a good-looking city ! Dressed in the latest fashion by their own world-class designers. Florentines and their city never stop to impress. So much art to admire, visitors are dazzled by the vision of locals at aperitivo time, effortlessly strutting, flirting and evidently enjoying life. One would easily assume nothing much has changed since the days of the Medici. But much has changed indeed.</p>
+		<p>Florence's brief time as capital of Italy in 1865 was like a shot of adrenaline. The city bulldozed, constructed, rearranged avenues, wiped out whole quarters and tore down the medieval walls. The scene was set for the modern regional capital of Tuscany. Along the broad viali -avenues - that encircle old Florence a confusion of endless traffic tears around in chaotic style. Horns sound and brakes squeal as Florentines dart in and out of lanes in search of a break in the traffic. Ever present scooters swerve in and around traffic fearlessly.</p>
+		<p>Florence is an ideal base to discover Tuscany, visit the medieval splendours of Siena, Pisa, Lucca and San Gimignano, and discover the magical Chianti countryside.</p>
+		<p>The best way to enter Florence is from the south, the road from rival Siena leads you to the heights backing the south bank of the Arno. Suddenly, through the trees, the glories of Florence burst into view - Giotto's Campanile -bell tower -, Brunelleschi's dome, the Basilica di Santa Croce. Impressive beyond imagination. The lingering reminders of the Medici who for centuries commanded the city's fortunes and were, as generous patrons, instrumental in unleashing the Renaissance, lives on. Still the family crest of six balls adorns many public buildings. The local artists and sculptors, supported by the Medici and other powerful families adorned the city with their finest creations. Michelangelo, Leonardo, Donatello, Giotto, the Lippis, Masaccio, Botticelli, Pontormo and a host of others have left their mark and world famous galleries such as the Uffizi, Pitti and Accademia today hold many of their works. According to UNESCO an estimated 60% of the world's most important artworks are in Italy, and over half of those located in Florence</p>
+		<p>Medieval and Renaissance Florence was a financial powerhouse and the Florin currency was created here in 1235. It became a romantic city much later. Its great families built fine mansions and lavished money on churches, public buildings and the arts, as to show greatness was to be great. The majesty of the Romanesque Baptistery, the Gothic Duomo and Renaissance basilicas was an advertisement as much of the power and wealth of Florence's leading families as of the city's artistic prowess. The families are long gone but their heritage and creations remain. These days as in the past the major center of activity in Florence is between Piazza del Duomo and Piazza della Signoria the city's civic heart.</p>
+		<p>Florence is a place timeless beauty and the locals are a part of it as evidenced by their appearance, home to the likes of Gucci and Ferragamo, Florence means one thing: style, both past and present. The streets of Flornce is as much home to stylish boutiques as it is to art galleries and palazzi.</p>
+		<p>When its time to eat you could hardly be in a more ideal place. Florence is known for its fabulous restaurants to cater to all budgets and tastes. Its home to top-grade Chiantis, but also exquisite tipples as well, Montalcino's Brunello, the Vino Nobile di Montepulciano and the more daring Super Tuscans.</p>
+		<p>Peak summer months of July and August are best avoided, when the weather can be unbearably hot and humid. Early autumn, late spring are the best time to visit avoiding the heat and the crowds. abundance of wild mushrooms and just-pressed olive oil</p>
+
+		<h5 id="FRANKFURT">FRANKFURT</h5>
+		<p>Germany's 5th largest city, Frankfurt am Main has gained enormous economic power (both within Germany and abroad) thanks to its position as a key transport hub and its status as a major venue for international trade fairs and other business events.Located in the middle of the highly productive Rhine-Main region, right at the centre of Europe, the city is the financial heart not only of Germany but also of the European Union, pumping euros into the world economy.</p>
+		<p>A settlement since at least 3000BC, Frankfurt's long and successful history of commerce stemmed initially from its central geographical location on the Main River and the Frankfurt Messe (fair). The Messe has been going since the 12th century (it is mentioned in a Jewish manuscript dating from 1160) and the city received its official Imperial privilege to hold an annual trade fair in 1240. Frankfurt got its name around AD500, when the Franks ruled the area and the settlement along the Main Fort transportation route became known as 'Franconovurd'.</p>
+		<p>Frankfurt's substantial political and cultural prestige is based on a fortunate history of decisive events. In 855, it became the election city for future monarchs. From 1562, the coronations of German emperors were held in the city's Cathedral of St Bartholomew. The Frankfurt Börse (Stock Exchange) began trading in 1585, moving to Börsenplatz, its current home, in 1879.In 1815, Frankfurt was declared a free city and part of the German Union, with the Bundestag, the Union's highest committee, located here. Frankfurt University, which took the name of the city's most famous son, Johann Wolfgang Goethe, in 1932, opened in 1914, just before the war that would forever change the face of Germany and indeed all of Europe.</p>
+		<p>If Frankfurt's political aspirations were dashed by the choice of Bonn as capital of the Federal Republic in 1949, the city has directed its post-war energies all the more wholeheartedly into its uncontested financial role. The modern skyscrapers of banks and corporations in the central business district are potent symbols of Frankfurt's economic strength and create a skyline that is more North American than European. 'Bankfurt' or 'Mainhattan' is home to some of the tallest buildings in Europe, including the 300m (984ft) Commerzbank tower. These modern behemoths have replaced parts of the old city that were destroyed by Allied bombers at the end of WWII. However, examples of pre-war Frankfurt can still be experienced in the reconstructed buildings on the Römerberg, including the cathedral and the Römer - Frankfurt's city hall since 1405.</p>
+		<p>With Europe's second busiest airport (after London Heathrow) and a vital junction on the national road and rail network, Frankfurt is a focal point of international transportation and communication.Not only is the city home to the European Central Bank and many other financial institutions, but it also commands thousands of companies, including the moguls of the German publishing industry, as well as a number of companies involved in public relations, marketing, media and telecommunications. As Arthur Schopenhauer (1788-1860) commented in 1843, 'here, you see and hear what is going on in the world'.</p>
+		<p>Most of Frankfurt's visitors come for one of the numerous trade fairs, exhibitions and congresses. Among the largest on the international circuit are the International Book Fair (Buchmesse Frankfurt) and ACHEMA (chemical engineering, environmental protection and biotechnology).But Frankfurt (to the surprise of many) has got another side to reveal to its focused business visitors. As the birthplace of Germany's most revered writer, Johann Wolfgang von Goethe (1749-1832), the city is at pains to impress with its cultural pedigree. Excellent museums, high-calibre performance groups and local festivals should entice the discerning guest away from the boardroom and the exhibition hall.</p>
+		<p>The city's climate is generally mild and well balanced with warm, occasionally wet, days in summer, with temperatures sometimes reaching 30°C (90°F) and more, and chilly winter days, when temperatures range between - 10°C (14°F) and 10°C (40°F).</p>
+
+		<h5 id="GENEVA">GENEVA</h5>
+		<p>Switzerland's most cosmopolitan city. It sits at the southwestern end of Lac Léman (the country's largest lake), astride the River Rhône, with foreground hills rising against a magnificent backdrop of mountains.</p>
+		<p>The river bisects the city, with the north side as the right bank (Rive Droite) and the south as the left bank (Rive Gauche). The main railway station and the suburbs are to the north of the river and the Old Town to the south of the river.</p>
+		<p>Geneva was settled since Neolithic times and became an imperial city in 1032, before achieving independence in 1530 and joining the Swiss Confederation in 1814. Its reputation for religious tolerance during the Reformation proved to be a major influence on its subsequent development.</p>
+		<p>For centuries, exiles from religious or political persecution chose the city as their refuge, from 17th-century English regicides to Lenin in the early 20th century. John Calvin, the Protestant theologian, made his home here in the 1530s from where he led the Reformation in Switzerland.</p>
+		<p>Switzerland's famed neutrality has long enticed international organisations to locate their headquarters in Geneva. There are currently around 200, raising the foreign community to 45% of the population. The League of Nations, predecessor of the United Nations, was established here in 1919. Although the UN moved to New York in 1945, Geneva has kept its European office here.</p>
+		<p>Other important organisations include the International Committee of the Red Cross (founded by the Swiss Henri Dunant in 1863) and the World Health Organisation.</p>
+		<p>The city is also a major banking centre (described by British actor Robert Morley as a 'city of wealth by stealth') and plays a significant role in the manufacture of watches, scientific instruments, jewellery and foodstuffs.</p>
+		<p>Geneva is an expensive city, but clean, efficient and a pleasure to visit with its beautiful Old Town, fine museums and an excellent public transport system. The city enjoys a mild climate with relatively low rainfall. The super-rich community of international civil servants and tax exiles demand good food, top hotels and entertainment and Geneva provides it all. Beneath the stereotypical veneer of diamonds and watches, however, one finds a tolerant and safe society with the Genevois strangely similar to the British - courteous and reserved.</p>
+
+		<h5 id="GLASGOW">GLASGOW</h5>
+		<p>The Galic translation of Glasgow is "the Dear Green Place," a Suitable title for the city with more parks per square mile than any other in Europe.</p>
+		<p>Once a prosperous Victorian hub and a world ship building center Glasgow is now very much a different city. Todays Glasgow is thriving, famous for its passion for football (soccer) and fabulous shops and restaurants. Its distinguished university is over 500 years old and worth a visit, as is Kelvingrove Park, the vibrant meeting ground adjacent to it.</p>
+		<p>Glasgow is very proud of its buildings by two great homegrown architects, Charles Rennie Mackintosh and Alexander Thomson.</p>
+		<p>Clouds and rain are an inherent part of this friendly city and those who don't like large number of tourists will find it very appealing.</p>
+		<p>Trendy cafés and well-preserved pubs, some with live music, are a refuge for the locals and visitors alike. Most impressive, though, are the Glaswegians, so genuine that their warmness and lyrical way of speech stay with you long after you leave Scotland</p>
+
+		<h5 id="HONG KONG">HONG KONG</h5>
+		<p>Stunning Hong Kong, a former colony of Britain offers arguably one of the world's best shopping opportunities. It is a popular tourist destination and one of the world's major business centres. Hong Kong's 260 outlying islands, few of which are inhabited, provide a tranquil alternative to its frenetic energy elsewhere. Hong Kong Island is an eclectic mix of modern skyscrapers, colonial buildings and traditional temples.</p>
+		<p>On 1 July 1997, Hong Kong became a Special Administrative Region of China in an arrangement lasting 50 years. Under the 'one country, two systems' policy, Hong Kong maintains its own political, social and economic systems. English remains an official language and Hong Kong's border with China still exists.</p>
+		<p>Hong Kong was part of China before coming under British administration as a result of the 19th-century Opium Wars. When peace terms were drawn up in 1841, Hong Kong Island was ceded to Britain. It remained under British control (apart from a four-year period under Japanese occupation during WWII) until the 1997 handover.</p>
+		<p>Much has changed since 1841 when then foreign secretary Lord Palmerston described Hong Kong as 'nothing but a barren island without a house upon it</p>
+
+		<h5 id="HONOLULU">HONOLULU</h5>
+		<p>Although unclear when the first Polynesians arrived in the southeastern region of Oahu now known as Honolulu, oral histories and artefacts suggest there was a settlement there as early as the 12th century.</p>
+		<p>Honolulu means 'protected bay', which aptly describes the calm, deepwater harbour that borders it. British captain, James Cook, who is credited with discovering Hawaii for the Western world in 1778, sailed by Oahu in the night on that fateful journey, entirely missing the bay and the little fishing village that stood beside it.</p>
+		<p>Sixteen years later, another English seaman, Captain William Brown, came upon the bay and dubbed it Fair Haven, echoing the Hawaiians' name for it.</p>
+		<p>When word spread about Brown's discovery, traders were ecstatic. They soon were dropping anchor in the large, safe bay by the hundreds, and the once-peaceful fishing village grew into a bustling seaport, then the capital of the Hawaiian kingdom in 1845, the capital of the territory of Hawaii in 1898 and finally, the capital of the state of Hawaii in 1959.</p>
+		<p>Honolulu today is a sophisticated, cosmopolitan city that's the hub of business, politics, education, entertainment and the arts in Hawaii. Fine dining, theatre, museums, concerts, shopping, sports, nightlife and cultural events - it offers all the pleasures of a world-class destination with the blessed bonus of balmy weather year round.</p>
+
+		<h5 id="ISTANBUL">ISTANBUL</h5>
+		<p>Istanbul is hot, not just the weather but also the restaurants, bars, galleries and clubs around town. It has been labeled world's hippest city by some media outfits and some say the present Istanbul comes close to the days of Süleyman the Magnificent.</p>
+		<p>Often described as 'the crossroads of Europe and Asia', Istanbul - formerly Constantinople - is a vast, heaving metropolis with an imperial history that stretches back for more than 1,500 years. No longer Turkey's capital but still the cultural heart of the nation, this city of 13 million sprawls across both sides of a land bridge spanning two continents.</p>
+		<p>Istanbul's unique position on the Bosphorus Strait, which connects the Black Sea to the Sea of Marmara and the Mediterranean, has resulted in the city being a jealously guarded centre of world trade since the Byzantine era.</p>
+		<p>Protected by water on three sides, with the natural harbour of the Golden Horn nestled within the city, Istanbul has always enjoyed an ideal location for conducting east-west trade and building empires. The city fell to the Ottomans in 1453 but remained a vital trading post for spices and textiles brought to Europe via the Silk Road from as far away as China.</p>
+		<p>Because of its strategic geographic position, Istanbul has suffered from frequent sieges over the centuries. That which started out as a Hellenic outpost to New Rome, the world's first Christian capital, went on to become the headquarters of the Ottoman Sultans, masters of the world's biggest Muslim Empire. Its identity today is altogether more secular but still combines both eastern and European characteristics.</p>
+		<p>As a result of such a rich and varied history, Istanbul's architectural inheritance is second to none. Fine examples are visible throughout the city with stunning Ottoman mosques, classical columns, Byzantine structures, ancient city walls and fine Orthodox churches.</p>
+		<p>In recent years, rapid industrialisation has drawn thousands of rural poor to the metropolis, resulting in a vast social gap between 'natives' and migrants and a very high growth rate. However, with Turkey's economy making an upturn in recent years and future EU membership firmly on the cards, Istanbul is currently thriving - for the wealthy at least. The city has become increasingly cosmopolitan of late: the arts and music scene is flourishing, and new bars, clubs, private art galleries, restaurants and designer fashion outlets are opening all the time.</p>
+		<p>Istanbul's climate for the most part is a Mediterranean one, although it is affected by climatic variations due to its location on the Marmara Sea and Bosphorus. Summers are hot and winters cold, with spring and autumn usually sunny and warm although they can be changeable. Light snow is common in the winter.</p>
+
+		<h5 id="LAS VEGAS">LAS VEGAS</h5>
+		<p>No other place offers such flagrant display of sheer excess as Las Vegas. Located in the middle of the arid Mojave Desert, at the southern tip of the state of Nevada, Las Vegas is an oasis of life, energy and money - a city whose raison d'être is entertainment.</p>
+		<p>Latest annual visitor estimates stand at 35 million who stay in the city's 150,000 hotel rooms. According to the Las Vegas Chamber of Commerce, Las Vegas is now the fastest growing city in North America with an estimated two acres of land being developed every 24 hours, and seeing approximately 50,000 people annually choosing to make the city and suburbs their home.</p>
+		<p>Ironically, Las Vegas' beginnings were, if anything, humble. In the 18th century, the spot where the city now stands earned the named Las Vegas (Spanish for 'The Plains'), because of a natural spring that created greenery in the dry desert. The city itself was founded in 1905 (as a stopover on the Union Pacific railway between Los Angeles and Salt Lake City) but it remained a remote backwater until the 1930s.</p>
+		<p>In 1931, however, gambling was made legal and Las Vegas quickly began to assume its present character. At first, it drew the droves of workers building the nearby Hoover Dam. Soon, it became a gambling and vacation mecca for the entire country - it attracted stars like Frank Sinatra, Elvis and Liberace and became America's premier entertainment hub.</p>
+		<p>The 1990s saw a trend towards building enormous hotel complexes competing with one another for the title of largest hotel in the world, and it has not let up to this day.</p>
+		<p>Today, Las Vegas is booming like never before. Entertainment so dominates Las Vegas that it is the backbone of the city's economy, creating vibrant hotel, retail and hospitality industries. The city's sheer exuberance in attracting visitors has created something along the lines of a city-sized theme park. Its residents lead normal lives in normal suburbs, but to visitors, it is an endless playground of neon lights, hotel lounges, topless revues, live entertainment and casinos.</p>
+		<p>The massive new development project in the CityCenter and Echelon Place, two multiple high-rise, mixed-use residential and commercial developments promise to completely change he face of the Las Vegas strip, but knowing this city, it will not stop there. Expect this city to continue dazzling its visitors.</p>
+
+		<h5 id="LISBON">LISBON</h5>
+		<p>Gothic cathedrals, majestic monasteries, quaint museums and narrow cozy back streets are all part of the beautiful and charming Lisbon. One of Europe's smallest capitals the city rises and dips over seven hills with the dusty cobbled streets such as Alfama as well as up market modern café's of Chiados street. The dramatic contrast of old and new is evident through out the city. Bright yellow trams wind their way through curvy tree-lined streets, Lisboêtas stroll through the old quarters, much as they've done for centuries and attend public baths, and enjoy drinking wine with fresh bread.</p>
+		<p>In tiny patio restaurants fadistas - fado music fans - Portugal's traditional melancholic singing perform in the background. The Lisbon experience includes many things, from enjoying a fresh pastry and bica (espresso) on a charming leafy plaza to shopping in elegant Chiado. It's mingling with Lisboêtas at a neighbourhood festival or watching the sunset from the old Moorish castle.</p>
+		<p>In the hilltop district of Bairro Alto, dozens of restaurants and bars line the narrow streets, with jazz, reggae, electronica and fado filling the air and revellers partying until dawn. Nightclubs scattered all over town make fine use of old spaces, whether on riverside docks or tucked away in 18th-century mansions. This dual presence of the centuries is evident throughout the capital.</p>
+		<p>Visit the fish market at Cais do Sodré and an aqueduct from the 18th-century. The Amoreiras shopping center.</p>
+		<p>Lisbon has an enviable number of sights within walking distance of each other and for when you get tried catch a funicular, tram, or metro</p>
+		<p>Just outside Lisbon, there's more to explore: the magical setting of Sintra, glorious beaches and traditional fishing villages.</p>
+
+		<h5 id="LOS ANGELES">LOS ANGELES</h5>
+		<p>Los Angeles is a young city which was a community of white American immigrants, poor Chinese laborers and wealthy Mexican ranchers, with a population of less than fifty thousand. Only on completion of the transcontinental railroad in the 1880s did it really begin to grow, as a national destination for good health, clean living, plentiful sunshine and endless acres of citrus crops. The biggest group of new residents were refugees from the Midwest, who created a new political ruling class to replace the old Mexican elite. The old ranchos were soon subdivided, the population grew rapidly, and the enduring symbol of the city became the family-sized suburban house (with swimming pool and two-car garage).</p>
+		<p>The biggest growth came after World War II with the mushrooming of the aeronautics industry - which, until post-Cold War military cutbacks, accounted for one in four jobs. The gigantic metropolis of Los Angeles spreads across the thousand square miles of a great desert basin, connected together by an intricate network of busy freeways between the ocean and the snowcapped mountains. Its colorful mix of shopping malls, palm trees and villas with swimming pools is both mildly surreal and startlingly familiar, thanks to the celluloid self-image that it has spread all over the world.</p>
+		<p>The first-time visitor may well find Los Angeles thrilling and threatening in equal proportions. While it has its fine-art museums, California cuisine and a few old-fashioned urban plazas, what people really come here for is to experience the city that has come to epitomize the American Dream - the fantasy worlds of Disneyland and Hollywood, as well as the gilded opulence of Rodeo Drive and the internationally known stars that can occasionally be seen shopping there.</p>
+
+		<h5 id="MADRID">MADRID</h5>
+		<p>With a population of just over 3 million, Madrid is Europe's third largest city and its highest capital, at 650m (2,132ft) above sea level.</p>
+		<p>Madrid is Spain's financial and political hub, home to the Cortes (Parliament), Senate and Royal Family, as well as the extraordinary cultural riches of the Golden Triangle - the Prado, Reina Sofía and Thyssen-Bornemisza art museums. Fashionable Madrid starts with the Salamanca district and the boutiques of Calle Serrano, while the modern business quarter extends along the north-south axis, known as the Paseo de la Castellana. Distinguished by its skyscrapers and impressive office blocks, this is where the multinationals have their headquarters.</p>
+		<p>The Madrid province stretches over 8,000sq km but the city's historic heart can be easily explored on foot. The narrow, winding streets of the medieval quarter stand in contrast with the grand boulevards conceived out in the 18th and 19th centuries - the time when Madrid began to become a modern capital.</p>
+		<p>Although most visitors first head to the central area known as Madrid of the Austrias, each barrio has its own unique character - Lavapiés, Malasaña and Chueca being the oldest and most interesting. From Madrid's Mile Zero it's a short walk to the city's main street, the Gran Vía, lined with shops, restaurants, bars, cinemas, offices and banks.</p>
+		<p>In AD 852 the Emir of Córdoba, Mohamed I (AD 852-886), ordered a fortress to be built on the left bank of the Manzanares River, the geographical centre of the Iberian Peninsula. He named the settlement 'Mayrit' which was the early beginnings of the city of Madrid. Some traces of this Moorish town still survives in a section of Muralla Arabe by the royal palace and can also be seen in Madrid's oldest church San Nicolas de las Servitas. The Christians and the Arabs fought fiercely over the territory which is today's Madrid till the latter part of 11th century when Alfonso VI finally captured the castle - Alcazar. 500 years later Philip II moved the capital from Valladolid to Madrid.</p>
+		<p>Madrid's many exciting fiestas go on through out the year, with each barrio - district - trying to outshine the other. The highlights include Reyes Magos -Feast of the Three Kings - Carnival, the religious processions of Holy Week, the San Isidro Festival in May which hails the beginning of the bullfighting season and Nochevieja - New Year's Eve - when the Puerta del Sol becomes the center point during several hours of wild celebrations.</p>
+		<p>Visitors should also look out for the major cultural festivals, notably the Veranos de la Villa in summer and the autumn Festival de Otoño, embracing film, dance, theatre and music of every description. Although Madrid's climate is more extreme than other Spanish locations, the warm dry summers and cool winters still allow for many alfresco activities.</p>
+		<p>Madrileños are fiercely fashionable and stylish in appearance and lifestyle, however they are equally traditional and proud of their magnificent culture. The importance of family is indisputable and most choose to live at and divorces are very much frowned upon.</p>
+		<p>The best times to visit Madrid are between March-June and then during September-October. July and August are months to avoid due to the heat. These are the times when the locals leave town and head for the coastal regions in the south to enjoy their holidays. This includes the shop keepers and businesses which can stay closed for the entire month.</p>
+
+		<h5 id="MARRAKECH">MARRAKECH</h5>
+		<p>Snake charmers, magic potions, hidden palaces: Marrakech brings the most outlandish travellers' tales to life. The pink city has waylaid desert caravans since the 11th century, as visitors succumb to the charms of its bluesy Gnaoua trance music, steamy hammams (traditional Moroccan spas), and multi-course feasts.</p>
+		<p>Visitors today often disappear down a maze of winding derbs (alleys) and emerge days later, relaxed and refreshed from their stays in spectacular riads (courtyard guesthouses) where their every need is anticipated by butlers, in-house chefs, and massage therapists.</p>
+		<p>Adventure awaits at the doorstep in the medina (old city), with its fondouks (artisans' workshops), seven zaouias (saints' shrines) and qissaria (pedestrian street) stalls ladling up steaming bowls of snails and sheep's head soup. The focal point of Marrakech is its celebrated square, the Jemaa el Fna, Morocco's UNESCO-recognised platform for halqa (street theatre). Towering over the scene is the stately Koutoubia minaret, a template for Hispano-Mauresque architecture and a reminder of the importance of Islam to the lives of the city's residents.</p>
+		<p>The caravan culture of Marrakech gave the outpost founded by Beber Almoravids in 1062 a worldly outlook that pre-dates the arrival of rooftop satellite dishes and the Cyberpark, the royal garden retrofitted with Internet kiosks. Morocco was colonised by the French in the early 20th century, though in practice Marrakech was run by a Berber warlord named Madani Glaoui who lavishly entertained colonial elites while ruthlessly suppressing his people. French influence lingers on in the wide boulevards of Guéliz and its few remaining art deco villas, most notably landscape painter Jacques Majorelle's stylish cobalt blue retreat in the Jardin Majorelle.</p>
+		<p>Making a fashionable late arrival in Marrakech were foreign hedonists and idealists. Yves Saint Laurent, the Beatles, Led Zeppelin and the Rolling Stones rubbed shoulders with William S Burroughs and other American Beat generation writers. Hippies and visitors following spiritual quests, creative inspiration, and the suspiciously fragrant clouds of smoke that once filled the city's back alleys, joined the fray.</p>
+		<p>Dynasties, rock stars and their habits come and go, but inspiration remains in Marrakech. In the souks and Ensemble Artisanal, artisans are already fashioning next year's interior design must-haves. Contemporary galleries have taken root in Guéliz, Marrakech's Festival of Popular Arts in July (see Special Events) draws dancers and musicians from Morocco and beyond, and the red carpet at the Marrakech International Film Festival (see Special Events) greets the glitterati from Hollywood to Bollywood each December.</p>
+		<p>Morocco remains one of the more liberal Muslim countries. King Mohammed VI is actively promoting education for women and respect for Berber culture, the core cultural force in Marrakech. The centuries-old fascination between travellers and Marrakech is stronger than ever !</p>
+
+		<h5 id="MELBOURNE">MELBOURNE</h5>
+		<p>Sophisticated and slick, Melbourne's physical and cultural landscape is shaped by a dynamic population, ever-ravenous for a bite of global culture. The result is Australia's most accessible multiculturalism. A vibrant cosmopolitan city, located on the magnificent Port Phillip Bay, Melbourne is the state capital and cultural heart of Victoria. The locals' claim that it is 'the best city in the world to live in' may rankle their rivals in Sydney but few would dispute that it is indeed a scintillating place to visit. In fact, the traditional rivalry between Melbourne and Sydney, which covers every sphere of life from business to sport, has resulted in a proud, dynamic city that strives for excellence in all things.</p>
+		<p>The city is situated on either side of the Yarra River and the area was originally home to Aborigines for thousands of years. The waterway attracted British settlers, who founded the Port Phillip Settlement of the Colony of New South Wales in 1835. In 1851, a separate colony was carved out of New South Wales and named Victoria, after Queen Victoria, and Melbourne was named after the British prime minister, Lord Melbourne.</p>
+		<p>That same year gold was discovered near Ballarat and Bendigo, to the west of Melbourne, and the ensuing gold rush turned the city into a powerful financial centre, as well as the first political capital, until Canberra was established in 1927. Numerous gardens and parks give a pleasant, open feel to the city, whose skyline mixes elegant spires with dazzling modern skyscrapers, which dwarf the elegant Victorian-era buildings that are dotted along leafy streets.</p>
+		<p>However, the city is defined more by its diverse population than by its architecture. Immigration at the end of WWII transformed Melbourne into a thriving cultural melting pot, totalling over 3 million people, with sizeable Italian, Greek and Chinese communities each carving out their own quarter.</p>
+		<p>In fact, large-scale immigration has made Melbourne home to the biggest Greek community outside Greece and the influx of immigrants from a wide array of countries has contributed to Melbourne's claim to be the cultural capital of Australia.</p>
+		<p>The introduction of European and Asian communities has resulted in an eclectic and energetic blend of theatre, music, art and literature. The international population has also brought a wealth of different cuisine, served up in a glorious range of restaurants, from the breezy outdoor cafes along the Crown Promenade overlooking the Yarra River, to the buzzing pizzerias in Carlton, the colourful Chinese eateries in Chinatown and the fine seafood restaurants in trendy St Kilda Beach, just a half-hour tram ride from the city centre.</p>
+		<p>One topic that is almost always discussed over a meal is the weather. The city has four distinct seasons and usually enjoys a pleasant, temperate climate. However, winters do get cold and summers see some swelteringly hot days. Indeed, sometimes, all four seasons happen in one day.</p>
+
+		<h5 id="MEXICO CITY">MEXICO CITY</h5>
+		<p>The world's third largest urban area fills a highland basin 2240 meters above sea level. You may feel somewhat light-headed upon arrival. The city nevertheless impresses visitors, welcomes the world and captivates them with its year-round mild climate, lively street life and colorful unique cultural offerings such as family gatherings at the Zocalo to look at tombstones, where a countless rows of mock monuments stand on ground covered with colored sawdust with marigolds and painted skuls.</p>
+		<p>French poet André Breton notoriously labeled Mexico the surrealist country par excellence, and the capital city appears to revel in its uniqueness.</p>
+		<p>Air pollution and crime remains a problem.</p>
+		<p>Home to arguably world's best hard liquor, called Tequila and the grand cantinas that serve them along with authentic Mexican and fusion cuisines, Mexico city is a mosaic of colorful scenes.</p>
+		<p>Catch a bull fight or watch masked wrestlers slugging it out at the lucha libre (wrestling) arena downtown. Rather than heading for the apocalypse, it now seems destined for a renaissance.</p>
+
+		<h5 id="MIAMI">MIAMI</h5>
+		<p>A city full of emtion, culture and texture, hot, sexy and it affects all the senses. A strong reflection of its growing Latin culture. Hardly the brash, drug-ridden crime capital of America that was made famous in the 1980s television series Miami Vice or in the movie Scarface. Today's booming metropolis has since been dubbed 'America's Casablanca,' the 'Magic City' and, more recently, the 'America of the Millennium.'</p>
+		<p>A truly multicultural American city which is a gateway to South and Central America and the third most popular city in the United States for international visitors after Los Angeles and New York. Miami just might be more Latin American than simply American. Despite being a city famed for its sunny weather, spicy nightlife and fine dining, Miami had surprisingly humble beginnings. Located on the far south coast of Florida, perched between a mangrove swamp and a barrier reef, Miami was founded 100 years ago, when a tycoon called Henry Flagler extended his railroad to carry citrus fruits from the frost-free south. Development was slow until the Florida land boom in the 1920s. During Prohibition, Al Capone came here when he had to get away from Chicago.</p>
+		<p>After WWII, the Mafia moved in and later, once Fidel Castro seized power in Cuba in 1959, waves of Cuban refugees arrived. Before long, they had established Miami as the Latin capital of the USA - with later mass immigration in the 1980s as well. The cultural climate the Cubans created in Miami inspired residents of other Latin American countries (Colombia, Dominica, Puerto Rico, Nicaragua, Haiti and others) to seek an escape from poverty or oppressive governments and emigrate. And now, Spanish is spoken as pervasively in Miami as English.</p>
+		<p>Yet the city is one of America's most ultramodern cities - the second largest in Florida after Jacksonville but easily its most exciting, exotic and cosmopolitan. Miami, known as Greater Miami and the Beaches or just Greater Miami for short, includes a number of islands and mainland communities, including two cities - Miami and Miami Beach.</p>
+		<p>Much of Miami's appeal is due to its diverse neighbourhoods, which range from the big-city, towering skyscrapers of downtown Miami (the commercial heart of the city) to Little Havana, home to the Cuban community, or to the trendy Miami Beach neighbourhood of South Beach. South Beach is probably most recognisably 'Miami,' with its candy-coloured art deco buildings set against a pure South Florida backdrop of cloudless skies, dazzling blue ocean, pale sandy beaches and swaying palm trees.</p>
+		<p>Greater Miami is also an international crossroads of commerce, finance, culture, sports, entertainment, transportation and tourism, which is, not surprisingly, the city's main source of income.</p>
+		<p>The influx of wealthy Latinos from South America is changing the economy significantly. Miami is now where they do business, and even many restaurateurs believe if they have a restaurant in Los Angeles and New York, they must have one in Miami.</p>
+		<p>The downtown Port of Miami is the largest cruise ship port in the world, which handles more than 3.6 million passengers a year. Besides its importance to cruise travel, Miami Beach is world-renowned for its 'gold coast' hotel strip, palatial properties and outdoor recreational facilities. Locals give the feeling that nothing could ever be more important than taking a morning run along the beach, sunning oneself or shopping during the afternoon, then dining and dancing till dawn.</p>
+		<p>Miami's subtropical climate ensures warm weather year-round. The city's real genius is in its succcess in having absorbed all the different cultures and ethnic groups which have descended on it.</p>
+		<p>Miami is essentially a city founded on the ideals of liberation by immigrants looking for an opportunity to realize the American dream. Now one of the most exhilarating cities in the country, this safe, successful, multicultural metropolis has vibrancy and savoir faire and really is a 'City of the Future,' surrounded by sparkling ocean and beautiful beaches, year-round perfect weather, colourful and delectable cuisine, and America's southern hub for sports, food and culture.</p>
+
+		<h5 id="MILAN">MILAN</h5>
+		<p>Milan (Milano), the capital of Lombardy is situated on the flat plains of the Po Valley. Milan is Italy's richest and second largest city. Wealthy and cosmopolitan, the Milanesi enjoy a reputation as successful businesspeople, equally at home overseas and in Italy. Embracing tradition, sophistication and ambition in equal measure, they are just as likely to follow opera at La Scala as their shares on the city's stock market or AC or Inter at the San Siro Stadium.</p>
+		<p>Three times in its history, the city had to rebuild after being conquered. Founded in the seventh century BC by Celts, the city, then known as Mediolanum ('mid-plain'), was first sacked by the Goths in the 600s (AD), then by Barbarossa in 1157 and finally by the Allies in WWII, when over a quarter of the city was flattened. Milan successively reinvented herself under French, Spanish and then Austrian rulers from 1499 until the reunification of Italy in 1870. It is a miracle that so many historic treasures still exist, including Leonardo da Vinci's The Last Supper, which survived a direct hit in WWII.</p>
+		<p>The Milanesi's appreciation of tradition includes a singular respect for religion; they even pay a special tax towards the cathedral maintenance. It is therefore fitting that the city's enduring symbol is the gilded statue of the Virgin, on top of the cathedral (Il Duomo).</p>
+		<p>Milan is founded around a historic nucleus radiating from the cathedral, with a star-shaped axis of arteries spreading through modern suburbs to the ring road. The modern civic centre lies to the northwest, around Mussolini's central station, and is dominated by the Pirelli skyscraper, which dates from 1956. The trade and fashion fairs take place in the Fiera district, west of the nucleus around the Porta Genova station.</p>
+		<p>Milan's economic success was founded at the end of the 19th century, when the metal factories and the rubber industries moved in, replacing agriculture and mercantile trading as the city's main sources of income. Milan's position at the heart of a network of canals, which provided the irrigation for the Lombard plains and the important trade links between the north and south, became less important as industry took over - and the waterways were filled. A few canals remain in the Navigli district near the Bocconi University, a fashionable area in which to drink and listen to live music.</p>
+		<p>Since the 1970s, Milan has remained the capital of Italy's automobile industry and its financial markets, but the limelight is dominated by the fashion houses, who, in turn, have drawn media and advertising agencies to the city. Milan remains the marketplace for Italian fashion - fashion aficionados, supermodels and international paparazzi descend upon the city twice a year for its spring and autumn fairs. Valentino, Versace and Armani may design and manufacture their clothes elsewhere, but Milan, which has carefully guarded its reputation for flair, drama and creativity, is Italy's world stage</p>
+
+		<h5 id="MOSCOW">MOSCOW</h5>
+		<p>Moscow is a metropolis that can often overwhelm with monstrous-sized avenues, heavy traffic jams, and a 24-hour lifestyle.</p>
+		<p>Behind that brash facade is a city that has been repeatedly built up and knocked down for centuries and where, with a little guidance, a visitor can find those quiet moments of serenity and beauty. Russians often call Moscow a bolshaya derevnya or "big village" and the center itself is more compact and vital a place than many other world capitals.</p>
+		<p>The Kremlin is the heart of Moscow, encircled twice, first by the Bulvarnoye Koltso or Boulevard Ring, a leafy greeny boulevard, split into 10 sections with different names. The second circling ring is the Sadovoe Koltso (Garden Ring), a huge road that holds no resemblance to its name. Moscow's downtown proper, and most of the city's famous sights, are within the Boulevard Ring.</p>
+		<p>Moscow is a rapidly expanding city, one should not be afraid to wander off the beaten track as despite its disorganized and chaotic feel it is actually organized in a clear manner.</p>
+		<p>Despite their destruction during Soviet times, numerous churches remain in the center, and the sound of church bells can be heard on the deserted streets on Sunday morning. Most churches are generally open from 8 AM to 8 PM, with exceptions for early or late masses.</p>
+		<p>You can visit most of the central areas on foot, but you can also visit various parts of the city with the notorious Moscow metro system, whose stations are arguably the most spectacularly beautiful in the world.</p>
+
+		<h5 id="MUMBAI">MUMBAI</h5>
+		<p>Mumbai, where the wealthy and the desolate poor coexist as does 21st-century technology and medieval squalor, epitomised by the destitute and crippled lying in rows beneath bright, electronic advertisements for high-technology companies. It boasts the finest collection of Victorian buildings anywhere in Asia and a myriad of temples and mosques. Yet 55% of its population live in slums - the highest percentage for any large Indian city.</p>
+		<p>Mumbai is also congested with people with a population of over 16 million, which is rising relentlessly, its streets are clogged with traffic, its air is highly polluted by the barely controlled emissions of its factories and vehicles, and many of its buildings are slowly crumbling. However, the city still has much to offer. Mumbai is colourful, aided by the saris, the bazaars and the very Indian culture itself. A sunny,, vibrant, energetic and friendly city, with a varied and fascinating history and many reasons to face the future with confidence.</p>
+		<p>Once Bombay, the city was renamed after the Hindu goddess Mumbadevi in 1995, although both names are still widely used Mumbai juts out southwest from the Indian subcontinent into the Arabian Sea. It has a hot, humid climate, which is only partly relieved by the annual arrival of the monsoon, between June and September. Originally, Mumbai was a group of seven separate islands. Gradually the islands merged into a single peninsula as land was reclaimed from the sea, although some of the former islands still lend their names to parts of the modern city - Colaba, for example.</p>
+		<p>Until the arrival of the Portuguese at Bombay in 1509 they coined the original name, which is a corruption of the Portuguese for 'good bay' the islands were home to the Koli fishermen and to a community of Buddhist monks. The Portuguese established a trading base and dominated the region for more than a century. In 1661, the Portuguese colony passed to Britain, as part of the marriage settlement between Charles II and Catherine of Braganza. From then until 1858, Bombay was governed by the East India Company, which existed for the purpose of trade and profit.</p>
+		<p>In 1858, following the suppression of the Indian Mutiny, control of British India passed from the East India Company to the Crown, where it remained until independence in August 1947. It was during this 90-year phase that the modern city took shape. The demolition of the old Bombay fort, in the 1860s, was the precursor to the redevelopment of the British city, or what is now the centre of the city - the area referred to as 'Fort'. Similarly, the extensive 1920s and 30s land reclamation along Back Bay provided the space for the development of the Marine Drive area of the city, now one of the most important parts of Mumbai.</p>
+		<p>From its earliest days, Mumbai was a trading place and today is the financial centre of India, home to the country's largest stock exchange and the heart of its banking industry. It handles nearly a third of India's foreign trade and is host to a large number of foreign multinationals. It is an important centre of the gem trade and its film industry (Bollywood) is a national institution. For many visitors, the city is only a point of arrival, a springboard for the south or the architectural glories of the north. But to pass through Mumbai without tarrying a while is to miss one of the world's great cities.</p>
+
+		<h5 id="MUNICH">MUNICH</h5>
+		<p>Munich (München) is Germany's third largest city, is located on the river Isar north of the Bavarian Alps. According to some home to the country's trendsetters. The city acquired the name München ('home of the monks') from its first monastery, founded in the eighth century. Monasteries have since played an important role in the history of the city, not least by starting the beer brewing traditions for which the city has received worldwide reputatinon. It's a well deserved repuation. Beer quality is still based on the Reinheitsgebot (Purity Edict), introduced by the Bavarian Duke Wilhelm IV, in 1516, which forbids the use of anything other than the core ingredients of barley, hops and water in the brewing process. Drinking a foaming Mass (measure) of beer in one of the city's beer halls or gardens is an essential part of the Munich experience.</p>
+		<p>Founded by Duke Henry the Lion in 1158, within a century, the city had become the seat of the Wittelsbach dynasty, who ruled the duchy, electorate and kingdom of Bavaria until the end of WWI.</p>
+		<p>Their influence is evident in the concentration of grand gothic, Renaissance, Baroque and neo-classical architecture adorning Munich's streets. Perhaps most importantly, the Wittelsbachs' patronage of the arts and extensive collections provided the basis for this affluent city's world-class museums and galleries.</p>
+		<p>Successive rulers, detecting a profitable source of tax revenue, actively encouraged beer production as a means both of raising money and keeping the populace happy at the same time.</p>
+		<p>The period between the wars represents the low point in Munich's history and tends to be ignored by tourist brochures. The city was the cradle of the Nazi movement after WWI and was the scene of Hitler's first attempt to seize power - the infamous 'Beer Hall Putsch' on 8 November 1923. Furthermore, in 1938, the treaty that surrendered a large portion of Czechoslovakia to the Nazis was signed by Germany, Great Britain, France and Italy in Munich - an act of appeasement that started the slide towards WWII.</p>
+		<p>The city suffered intensive bombing damage during Allied air raids at the end of the war but the economic success of the post-war years has supported a comprehensive rebuilding and restoration programme, making the city one of the most popular tourist destinations in Germany.</p>
+		<p>The citizens of Munich demonstrate world class refinement as well as genuine passion for the region's many traditions, and tourists flock to the city for the world famous Oktoberfest, to indulge in arguably world's best beer and the festive mood that comes with the occasion.</p>
+		<p>The stereotypical images of lederhosen-clad Bavarians quaffing vast portions of beer and sausage might apply at this time, however, with a strong cultural scene, richly endowed art collections and excellent shopping, the city, also home of BMW cars and centre of the German film industry, certainly has more to offer than just light entertainment. The summers are warm and there are plenty of restaurants with open air garden which take advantage of it . Winters are cold and snowy with charming Christmas markets making Munich a lovely destination all year round.</p>
+
+		<h5 id="NEW DELHI">NEW DELHI</h5>
+		<p>A shock for the senses, especially for the first-time visitor. It spreads uncontrollably over a vast tract of the Jamuna plain, its population is a seething mass of humanity and its poverty and pollution can challenge even the most hardened travellers.</p>
+		<p>However those who look beyond the chaos that envelops much of the city, the thundering traffic, the irksome fumes and the constant demands of the commission hustlers will discover delights at every turn (historical, architectural, artistic and culinary) quite apart from the vivid colour, subcontinental eccentricity and restless vibrancy that give Delhi its multi-faceted spirit.</p>
+		<p>As well as being a starting-point for visiting Agra, the home of the world-renowned Taj Mahal, or the cities and forts of Rajasthan, Delhi itself has much to offer. The architectural legacy of the Islamic conquerors is rich and varied, the colonial centre is imposingly impressive; there are some brilliant museums and the city's bazaars and shops offer a bewildering array of goods, from spices and silks to car spare parts. The city's impressive restaurants tempt the visitor with a wide variety of delicious food, ranging from traditional Indian curries to global offerings that include Mediterranean, Italian, Japanese and Thai.</p>
+		<p>Delhi has been the capital of India since independence in 1947, but even before that, the British moved their capital here from Calcutta (now Kolkata) in 1911. For much of its history, Delhi was the centre of power of the various Muslim dynasties that ruled swathes of the subcontinent from the 12th century.</p>
+		<p>Modern Delhi is really two cities: Old Delhi, packed into a tangle of narrow, crowded streets beneath the Red Fort's imposing walls, and New Delhi, which is its polar opposite, complete with the grandiose imperial citadel, broad, leafy boulevards and well-spaced bungalows, as laid out by Lutyens and Baker in the 1920s.</p>
+		<p>Old Delhi, built by Emperor Shah Jahan in the 17th century, is only the latest of eight known cities that have existed in this location since the Muslims first arrived. Around New Delhi, particularly in the area known as Transjamuna, across the river from the Old City, are the suburbs and slums that have sprung up to accommodate a population that has increased, more by migration than by natural increment, by 46% between 1991 and 2001 (latest census figure available).</p>
+		<p>This population explosion has brought greater poverty and more wretched degradation in its wake - an estimated 45% of Delhi's inhabitants live in slum accommodation and there are beggars on almost every street corner. Throughout India, literacy rates are improving sharply, but in Delhi, illiteracy continues, marginally, to grow (the 2001 census indicates a 6.5% increase in literacy in Delhi since 1991, but there has reportedly been a slower growth rate since 2001).</p>
+		<p>Despite its long history, Delhi as a capital city is in fact very young. At partition in 1947, Delhi was radically and permanently changed, more or less overnight. With the creation of a predominately Hindu India and a Muslim Pakistan, there was a mass migration of peoples in both directions and sectarian bloodletting on a horrifying scale. Having been largely Muslim, before 1947, at partition Delhi became a Hindu and Sikh majority city. At the same time, the population virtually doubled, despite the mass exodus of Muslims.</p>
+		<p>Summer in Delhi is best avoided. From mid April, the temperature rises. For much of May, June and July the thermometer lingers at around 45°C (113°F), before the monsoon brings some relief. The best time to visit is November to March</p>
+
+		<h5 id="NEW YORK">NEW YORK</h5>
+		<p>New York places a long shadow over the rest of the cities of the world. This is a city of superlatives, apart from world financial center, home to world renowned restaurants, architectural masterpieces and formidable art institutions that make it one of the world's major cultural destinations. It's a resteless city that moves at a fierce pace, ever on the edge of invention and just about everything else. Its creativity has secured the reputation of its venerated restaurants, super hip nightspots and leading edge theatres.</p>
+		<p>New York has always been a city of the world with multinational, multicultural inhabitants. Residents from some 170 foreign countries, speaking over 130 languages, call New York home. Like millions of immigrants who came before them, they help make the city what it is today, working among the 20,000 restaurants, 10,000 stores and 150 museums scattered about the metropolis.</p>
+		<p>The epicentre of New York life always has been the island of Manhattan, which is surrounded by four other distinct city boroughs (the Bronx, Brooklyn, Queens and Staten Island) all of which have their own character and attractions.</p>
+		<p>The first European settlement on Manhattan was by the Dutch, during the 1620s. They named the city New Amsterdam. In 1664, the British took over and renamed it New York. The settlement rapidly flourished, expanding from south to north along the island. Over the next few centuries, Manhattan rapidly developed into the America's economic and cultural capital, housing an entire world within its 58 sq km (23 sq miles).</p>
+		<p>New York is a super resilient city which never seems to lose its vitality, and marches forward to confront a new challenge, among them, making the city 'greener' in the face of the global movement to be environmentally conscious. construction has began in 2006 on the 541m Freedom Tower which will rise above the former site of the World Trade Center.</p>
+		<p>New York is an excellent place to visit at any time of year, although it is particularly pleasant during the spring and autumn, when temperatures hover around 21°C (70°F). New York winters tend to be unpredictable, although cold temperatures bring less snow here than to other nearby cities, while summers are hot and humid, often lasting until September.</p>
+		<p>There is truly no city like it and as Frank Sinatra sang about it, " if you can make it there, you can make it anywhere"</p>
+
+		<h5 id="PANAMA CITY">PANAMA CITY, PANAMA</h5>
+		<p>Undoubtedly the most cosmopolitan capital in Central America, Panama City is both a gateway to the country's natural riches and a vibrant destination in its own right. As a thriving center for international banking and trade, Panama City sports a sultry skyline of shimmering glass and steel towers that is reminiscent of Miami. Not surprisingly, the city residents often joke that Panama City is the 'Miami of the south,' except that more English is spoken.</p>
+		<p>Although there's no shortage of fine dining and chic dance clubs, visitors are often drawn to Casco Viejo, a dilapidated neighborhood of historic buildings and cobbled streets reminiscent of old Havana. Abandoned in favor of more stylish neighborhoods, Casco Viejo lay crumbling on the edge of the sea for decades. However, following an ambitious reclamation of this colonial district in recent years, it is priming itself to charm and enchant visitors once more.</p>
+		<p>The city's architectural diversity is rivaled only by its cultural diversity. Urbanites here hail from all over Latin America, the Caribbean, Asia and, increasingly, North America and Europe. Given the ethnic diversity, it's no surprise that the capital boasts a wide array of restaurants, with everything from Panamanian-style ceviche and bluefin tuna sushi to tikka masala and chicken kebabs. Not far from the city, you'll also find some impressive adventure opportunities, from hiking through tropical rainforests to skirting along the jungle on a train ride to Colón.</p>
+		<p>One of the most worthwhile destinations in Central America, Panama city is also one of the world's yet to be discovered hidden gems. Internatioanl real estate developers such as Donald Trump have invested in luxury highrise construction projects there and world famous interior designers such as Philippe Starck have been commissioned to decorate the interiors of some the city's most luxurious high rise residences.</p>
+
+		<h5 id="PARIS">PARIS</h5>
+		<p>The city of lights is a challenge to describe through words - as is attempting to describe a painting. Hemingway's much quoted 'Moveable Feast' amongst them, but for once it is also a city that justifies the hype. The French capital is one of the world's truly great cities, a metropolis that lavishly satisfies the desires of tourists and business people alike and manages to retain a standard of living that makes becoming a Parisian so alluring.</p>
+		<p>The city dramatically wears its history on its sleeve, and today it is still centred around the Ile de la Cité, where over 2,000 years ago Celtic tribes first eked out a living. The Romans were later drawn to this strategic location in the middle of the Seine, a natural crossroads between Germany and Spain, and took control in 52BC. Despite English rule between 1420 and 1436, a series of French kings brought about the centralisation of France, with Paris at its cultural, political and economic heart. The city centre is quite surprisingly compact and the Métro system makes getting around fairly easy. A good way for first time arrivals to get an idea of how Paris fits together is to take a cruise on the River Seine or ascend the Eiffel Tower and take in a sweeping view of the city. With so much to see, time management is crucial and many people choose to concentrate on one or two of the arrondissements (districts).</p>
+		<p>Despite its large size and population, almost everything worth seeing is contained within the Boulevard Périphérique (the ring road). The compact centre is easily navigable on foot, with the efficient and comprehensive Métro system always on hand to ease tired limbs. The lifeblood River Seine splits the city neatly in two and the useful arrondissements (districts) system neatly carves Paris into manageable chunks. For modern art and design head to Centre Georges Pompidou, place Beaubourg, 4th; Jean Nouvel's Institut du Monde Arabe, 1 rue des Fossés-St-Bernard, 5th; or the Grande Arche de la Défense with its high-speed glass lift offering a spectacular view of Paris.</p>
+		<p>Paris is awash in museums, ranging from the vast collections of the Louvre to the small and quirky - such as the Musée des Arts Forains, 53 avenue des-Terroires-de-France, 12th, a shrine to fairground art, with something for everyone scattered through the metropolitan area. The Musée du Quai Branly,37 quai Branly, 7th, is Paris's newest museum, opened to much fanfare in 2006. The Grande Arche, which lies along the same geographical axis as Napoleon's Arc de Triomphe and the Champs-Elysées, was built a century and a half later. This incongruity (the modern city juxtaposed with the old) is all part of the charm of Paris.</p>
+		<p>The history of Paris can be uncovered throughout its distinctive districts. Hilly Montmartre, with its village atmosphere, was where the Paris Commune began in 1871; the Marais evokes medieval Paris, its winding streets a sharp contrast to the wide, orderly Haussmann boulevards, envisaged by Napoleon III to keep the mobs at bay.</p>
+		<p>These grand 19th-century avenues still dominate the city, interspersed with modern flourishes. The grands travaux (large projects) of Président Mitterrand added the Grande Arche de la Défense, the ultra-modern Opéra de la Bastille, the impressive Institut du Monde Arabe, and plonked a glass pyramid in the central courtyard of the Louvre.</p>
+		<p>A relatively recent Paris addition is the Paris Plage in summer when the car takes a back seat and the city's citizens relax by the Seine amidst a world of sand and deckchairs.</p>
+		<p>Paris is beautiful at any time of the year but the most ideal time is during the famous Paris spring between April and June, when the days are sunny but not too hot. The autumn and winter months are another good time to come when there are smaller crowds and snow is a rarity, but there really is no bad time to visit one of the world's truly great cities.</p>
+
+		<h5 id="PRAGUE">PRAGUE</h5>
+		<p>The Czech capital, is truly one of the most beautiful, magical and memorable cities you will ever visit. More and more visitors are discovering Prague's magic each year. A UNESCO world heritage listed city labeled as the " city of a thousand spires" Home to Franz Kafka and world's best crystal, Prague offers much more than one could imagine.</p>
+		<p>A model to post communism success. The Czech spirit remained undaunted and in 1989 with the fall of the Berlin Wall the Czechs finally broke free of communism during the 'famous Velvet Revolution', which quickly led to the 'Velvet Divorce' as the Slovak part of Czechoslovakia chose to part ways. With poet and president Vaclav Havel at the helm, Prague became the hub of the post-communist eastern European revival with expats flocking to the city in the 1990s, quickly developing a buzz that drew comparisons Paris of 1920s.</p>
+		<p>Prague's story goes back as far as 400 BC to the distant days of the Celtic tribes. The city's true golden age began when Charles IV of Bohemia was elected Holy Roman Emperor in 1346. The 20th century brought massive trauma for Czechoslovakia and Prague and the country was occupied by the Nazis during WWII and then spent the best part of five decades under Soviet communist rule, with all attempts to win greater democracy in 1968's 'Prague Spring' brutally crushed under the weight of Russian tanks.</p>
+		<p>The post Velvet Revolution fervor has faded somewhat and these days there are as many foreign as Czech languages on the streets with the city massively popular as a tourist destination and as a business hub. In 2004, the Czech Republic became part of the European Union, further solidifying the city's importance and popularity.</p>
+		<p>Prague's winters are cold and harsh, but still charming, making it a joy to visit at any time of the year. Spring and autumn are often idyllic with summer bringing some very warm central European temperatures.</p>
+		<p>The extensive gothic building program, including Charles Bridge, St. Vitus Cathedral, the University, and the New Town, centred on Wenceslas Square transformed the city into one of the greatest and most powerful in Europe. This is a city filled with museums, boutique shops and stylish bars serving the great local beers in the amazingly well preserved historic core.</p>
+		<p>Whether you prefer the charm of the old town square or the glamour of the slick sideof town the Czech capital has it all.</p>
+
+		<h5 id="REYKJAVIK">REYKJAVIK</h5>
+		<p>Reykjavik's location, set on the fringe of the Atlantic Ocean and surrounded by a lunar volcanic netherworld, with the shadowy hulk of Mount Esja in the background, is both romantic and beguiling. Legend has it that the world's most northerly capital was founded by a Viking called Ingólfur Arnarson, who named the place Reykjavik (Smokey Bay) after the steam rising from the hot springs.</p>
+		<p>Today, these numerous geothermal springs provide almost all the heating and water in the city, and the low level of fuel emissions gives the city clean air and crystal clear skies - when it is not raining.</p>
+		<p>The lack of pollution is also due to the comparatively small size of the capital. From only a handful of farmhouses until the middle of the 18th century, when a small trading community began to grow, Reykjavik gradually developed as an urban centre. By the end of WW2, Iceland gained full autonomy from Denmark and Reykjavik became Iceland's capital city.</p>
+		<p>Although it still feels like a provincial town, with its low buildings and brightly painted houses, Greater Reykjavik is home to three out of five Icelanders and the diminutive city dominates Iceland politically, socially, economically and culturally.</p>
+		<p>And since Reagan and Gorbachev played out the end game of the Cold War in Reykjavik in 1986, the city has emerged as an unlikely tourist destination.</p>
+		<p>Countless travel articles are published focusing on its nefarious nightlife and thousands of tourists a year fly to the city to seek out the legendary bars and clubs. Considering that beer prohibition only ended in 1989, this is particularly impressive but the locals seem to have made up for lost time and the scene in the city centre at weekends is one of hedonistic mayhem.</p>
+		<p>During the day, Reykjavik is a far more sedate place with trim houses, rubbish-free streets and an easygoing pace of life. There are bountiful cultural attractions, countless cafes, six geothermal swimming baths and a myriad of day trip opportunities into the stunning hinterland. Cultural festivals are also currently multiplying and maturing, as Iceland begins to establish its cultural identity.</p>
+		<p>Situated in the country's southwest corner, on Faxaflói Bay, the city has a very wet climate with winds and rain blowing in from the sea. However, the Gulf Stream prevents the city from becoming as cold as its northerly location might suggest. Still, winters are long and bleak, with just four hours of daylight on some days, although the chance to view the spectacular Northern Lights makes up for this and the summer, by contrast, brings the famed midnight sun.</p>
+
+		<h5 id="ROME">ROME</h5>
+		<p>The Italian capital is an unmatched mix of ancient ruins, seemingly round the clock street life and jaw dropping art. </p>
+		<p>Home to world famous historic icons such as the Colosseum, Pantheon and Roman Forum.  The grandeur of this city makes it easy to see it once was the capital of the world. The constant power struggle between Rome and the powerful Catholic Church is equally evident in this city.  St. Peter’s Basilica is one major example of Catholic Church’s power and its quite to the benefit of the visitors and Roman’s alike as it adds so much beauty to the city as well as being a major tourist attraction. Evidences of Renaissance architecture is widely visible in many parts of Rome. </p>
+		<p>Rome’s appeal and attraction of world’s top artists through the years makes it a joy to walk through and behold. Amazing artistic treasures abound in city’s museums, Renaissance frescos and countless piazzas.
+		<p>A city that fully satisfies your hunger for unmatched architecture, art, world class shopping and some of world’s finest cuisines. From street side cafes, pizzerias and trattorias to countless fine dining establishments. We believe it would be very difficult to find bad food, wine, gelato or coffee in this truly unique city. </p>
+    	
+    	<h5 id="SALZBURG">SALZBURG</h5>   
+    	<p>Birthplace of Mozart, location of Sound of Music and so much more.  Maximum charm and elegance reflected in historic architecture, graceful cafes, perfectly manicured parks and the mesmerizing Salzach River.</p>   
+   		<p>Salzburg Card is highly suggested if you wish to visit the attractions and use the excellent public transportation and cable cars.   </p>
+    	<p>Getreidegasse and Linzer Gasse are the destinations for shopping for all sorts items you won’t find anywhere else from antiques and clothing to Mozart perfume.</p>
+    	<p>You’ll find a concentration of bars and restaurants on the banks of Salzach River close to Gstättengasse.</p>
+    	<p>Don’t miss visiting the many museums and Mozart’s home.</p>
+    
+    	<h5 id="SAN FRANCISCO">SAN FRANCISCO</h5> 
+    	<p>The city by the bay where cable cars go halfway to the stars and you’ll need your warmest clothes even in middle of Summer.  This is has been famous for a long list of things including hippies, gold Rush and high-tech capital of the world and the list is ever growing.  Many foreign visitors claim it’s America’s most European city.</p>
+		<p>We don’t know what that means, but you are able to walk to most places and it is full of restaurants and charming shops.</p>
+		<p>If you’re a fan of Asian and Mexican food, this is probably one of the best places on earth for it , but the list of ethnic restaurants does not end there.</p>
+		<p>Head to Twin Peaks for city’s best views.</p>
+		<p>Haight Street to see the hippies and China Town to feel you’re in China.</p>
+		<p>This is home to famed Golden Gate Bridge and Alcatraz Island and its notorious prison.  There are boat tours from Fisherman’s Wharf that take you there and while in Fisherman’s Wharf enjoy some of the best Clam Chowder Soup and Seafood in America.</p>
+		<p>Union Square has the biggest concentration of shops and department stores.</p>
+		<p>Visit the Japanese Tea Garden inside Golden Gate Park and the Mission for the latino side of the city.</p>
+		<p>Don’t miss the California Academy of Sciences and the Palace of Fine Arts.</p>
+
+        <h5 id="SHANGHAI">SHANGHAI</h5> 
+    	<p>Super glamorous, historic and stunning.</p>
+    	<p>China’s biggest city and financial hub. The Bund is the heart of the city, which is a waterfront promenade dotted with colonial era structures. Pudong District across the Huangpu River is home to futuristic skyscrapers including the world’s tallest – at the time of this publication – Shanghai Tower at 632 meters high.</p>
+		<p>Evidences of this city’s glamour years, 1920s and 1930s can be seen in art deco buildings.</p>
+		<p>Currently it’s a city filled with impressive skyscrapers, stylish restaurants, shops and cafes. Food is central to this town and whether it’s a social gathering or a business deal, food is always present.</p>
+		<p>pChinese shoppers have an insatiable appetite for luxury goods, nearly half of world’s Luxury goods are consumed here. </p>
+		<p>In addition to internationally recognized luxury brands, Shanghai has plenty pop-up boutiques, vintage shops and new designer outlets.</p>
+		<p>At night you’ll find dizzying choices of shows, clubs and music venues including Chinese Opera.</p>
+
+		<h5 id="SINGAPORE">SINGAPORE</h5>  
+    	<p>Being in the hotel business, when we think of Singapore we think of Raffles Hotel Raffles Plaza where the hotel is located is filled with some stylish shops and bars. </p>
+    	<p>Its also the birthplace of Singapore Sling Cocktail which was created at a bar housed in the same place.</p>
+    	<p>It should be mentioned that Singapore, an island state  with 5 million inhabitants is also a global financial center of multicultural demographic with a tropical climate.</p>
+		<p>Home to Changi Airport, consistently rated one of world’s best along with Singapore Airline which is consistently ranked one of world’s best carrier.</p>
+		<p>We like to refer to it as the Switzerland of Asia. City’s superb public transportation makes it very convenient to travel to any part of the city.</p>
+		<p>World’s cleanest city where spitting on the ground will earn you a hefty fine.</p>
+		<p>Orchard Street is the main shopping and dining center.  Marina Bay Sands is home to gleaming office and hotel towers as well as shopping malls. Visit the observation deck of Marina Bay Sands for some of city’s best views.</p>
+		<p>Gardens of the Bay is a unique indoor botanical garden which is a must see.</p>
+		<p>Little India is a restaurant and shopping complex for some of the most delectable Indian cuisine and Mustafa multi-level store open 24 hours-a-day features just about everything from A to Z.</p>
+		<p>Singapore zoo, claiming to be world’s best rainforest zoo is definitely worth a visit for the whole family.</p>
+		<p>For a beach experience, Sentosa Island’s Siloso Beach is the place.</p>
+		<p>Don’t miss Haji Lane in the Kampong Glam area for independent fashion boutiques and Middle Eastern cafes.</p>
+		
+		<h5 id="ST. PETERSBURG">ST. PETERSBURG</h5>
+		<p>St. Petersburg, the city of white nights, is Russia’s second largest city is a port city on the Baltic Sea with 5 million inhabitants.
+		<p>Its located on Neva River at the head of Gulf of Finland on the Baltic Sea. Lavish architecture abounds everywhere in this beautiful city of rich culture and charming canals.
+		<p>Founded in 1703 by Peter the Great it was the imperial capital for 2 centuries.</p>
+		<p>It is to this day Russia’s cultural center and home to world famous Hermitage Museum, Mariinsky Theature and St. Isaac’s Cathedral. The glamorous Summer Palace is just outside of the city.</p>
+		<p>The city is filled with amazing architecture and grand structures unseen anywhere else.</p>
+		<p>This is a highly artistic city and you’ll find amazing street painters creating beautiful original paintings which are often for sale.</p>
+		<p>Russia’s famous grand beautiful metro stations are also grace this city’s underground.</p>
+		<p>A visit to Peterhof is not to be missed.</p>
+		<p>Tsarskoe Selo with its two grand opulent palaces, testament to Russian emperor’s excess is definitely worth a visit.</p>
+		<p>Gatchina, the family home of four generations of Russian emperors and Oranienbaum, the only suburban palace to have escaped Nazi invasion has a charming park and a magnificent baroque palace.</p>
+
+		<h5 id="STOCKHOLM">STOCKHOLM</h5>
+		<p>The Swedish capital encompasses 14 islands and more than 50 bridges.</p>
+		<p>Expect cobblestone streets and historic buildings in this city of 1.5 million.</p>
+		<p>It’s the cultural, media, political and economic center of Sweden.</p>
+		<p>Stockholm is home to museums, galleries and world’s first open air museum.</p>
+		<p>Visit the Royal Palace to see the lifestyle of the past royals.</p>
+		<p>Vasa Museum, which is a non-art museum is a must visit.</p>
+		<p>The annual Noble Prize ceremony is held here at Birger Jarlsgatan is one of the longest streets in Stockholm Concert Hall.  Stockholm’s Metro with its impressive decoration is known as the longest art gallery in the world, opened in 1950.</p>
+		<p>We also suggest visiting Café Opera restaurant and nightclub. With its impressive décor is a highly popular place for people of all ages.</p>
+		
+		<h5 id="SYDNEY">SYDNEY</h5>
+		<p>Australia’s most populous city and home to the world famous Sydney Opera House is a metropolis of gourmet restaurants, luxury hotels, breathtaking Sydney Harbour and Sydney Harbour bridge. The locals are known as Sydneysiders. </p>
+		<p>Take a walk on Circular Quay and you’ll fall in love with the beauty and vast openness of this city.</p>
+		<p>Sydney Tower’s Skywalk provides 360 degree views of the city.</p>
+		<p>Bondi beach, Tamarama, Bronte, Clovelly and Coogee beach are just a short ride from downtown and George street offers an impressive array restaurants, bars and night clubs.</p>
+		<p>City’s Taronga Zoo is home to 4000 animals from various exotic and native species including tigers, gorillas, leopards and chimpanzees, kangaroos and koalas.</p>
+		<p>Taste amazing seafood such as Blacklip Abalone and Murry cod at Quay.</p>
+		<p>A fairy ride to Manly is highly suggested to experience surf breaks, scenic walk and colorful cafes.  Snorkeling tours are a great idea to see more than 200 fish species such as Blue Groper.  </p>
+
+		<h5 id="TOKYO">TOKYO</h5>
+		<p>Ultra modern and tradition perfectly blend in this Japanese capital.</p>
+		<p>The list of things to do is too long.</p>
+		<p>Home to more Michelin Starred restaurants than any other city.</p>
+		<p>Ginza is for glitzy shops and high priced glamour shopping and Shinjuku is for more moderate shopping as well as endless night clubs, restaurants, bars and entertainment centers from tame to risqué.</p>
+		<p>Ropongi Hills, creation of Mr. Mori is the hippest and most cool area of Tokyo filled with ritzy hip hotels, excellent restaurants and fashionable boutiques.</p>
+		<p>Asakusa is home to the traditional Asakusa Temple as well as the famed Sensoji Temple which are well worth a visit.</p>
+		<p>Public transportation is superb and efficient and locals are highly disciplined and law abiding. Some of the best eateries are inside underground metro stations.  The Tokyo Station is one fine example of this.</p>
+		<p>Tokyo Sky Tree with height of 634 meters is the tallest structure in Japan. The Sky Tree Café and the spiraling corridor on top offers incredible views of the city.</p>
+		<p>The Narita Express train to and from aiport offers an excellent non-stop efficient transportation between the city and the airport.</p>
+
+		<h5 id="VENICE">VENICE</h5>
+		<p>One of world’s most famous and desirable destinations is built on more than 100 small islands and 400 bridges in a lagoon in Adriatic Sea.</p>
+		<p>Some 55000 reside in the historic center of Venice ( centro storico ).</p>
+		<p>There are no cars, motorcycles or even bicycles, only canals and boats. The world famous Gondolas as well as every other kind of boat one can imagine. </p>
+		<p> Piazza San Marco is the focal point of this city.</p>
+		<p>It is a visual delight like no other place on earth. Historic renaissance palaces line the city.</p>
+		<p>Campanile Bell Tower offers panoramic views of the city.</p>
+		<p>The city state of Venice is the first international financial center which eventually emerged from the 19th century to its peak in the 14th century. This was responsible for the wealth of this city.</p>
+		<p>Visit the city’s casino housed in a graceful historic building. Don’t forget your passport to be able to enter.  A Gondola ride is sure a unique experience, however  the No. 1 Vaporeto from its first to last station offers an excellent visual tour of the city’s fabulous structures.</p>
+		<p>A visit to Rosso Pomodoro Restaurant with its famed marinara sauce which is for sale as well and Café Lavena and Café Florian in Piazza San Marco is a must.</p>
+		<p>The terrace of the Bauer hotel is as nice as any place for a meal or cocktail by the Grand Canal.</p>
+
+		<h5 id="VIENNA">VIENNA</h5>
+		<p>Austria’s capital is one of world’s most beautiful and unique cities.  Dotted with imperial palaces and grand structures.  The Schönbrunn, the Habsburg Summer Residence and more are all here.  The city lies in country’s east on the Danube River.</p>
+		<p>Impressions you get when first arriving is this city is that of cleanliness, grand, graceful and inviting. Public transportation is second to none.</p>
+		<p>Places to visit are Schönbrunn Palace, Kunsthistoriches Museum, Schönbrunn Gardens, Imperial Palace, Tiergarten Schönbrunn ( The Zoo ) Belvedere Palace Museum, St. Stephen’s Cathederal and State Opera House. </p>
+		<p>Many of the city’s best hotels, restaurants, shops and other attractions are on or around Kärtner Ring which is the circular road that loops around the center of the city.  Austria’s claim they invented the cafes, Viennese Café at least and they seem to have the most beautiful and inviting cafés in the world. Many of them can be found also on or around Kärtner Ring.</p>
+		<p>A visit to the famed Hotel Sacher and their even more famous Sachertorte cake has become part Vienna’s official attraction.</p>
+
+		<h5 id="ZÜRICH">ZÜRICH</h5>
+		<p>If Bern is the capital of Switzerland, Zürich is the financial capital and hub of banking and finance of Switzerland as well as its railway hub. Located at the north end of Lake Zürich, its also Switzerland’s biggest city with about 400,000 inhabitants.</p>
+		<p>Bahnhofstrasse which begins at the main railways station is the main artery of this city lined with shops, restaurants and cafes.  </p>
+		<p>Züri West is the hub of city’s nightlife.</p>
+		<p>The city’s pre-medieval history is evident in the charming Altstadt ( old town ) on either sides of Limmat River.  </p>
+		<p>There are many museums and galleries in Zürich, Swiss National Museum, FIFA Museum and Kunsthaus are some of the famous ones.  Its worth mentioning that this city was ranked first on the list of top 25 cities in the world to make a base at by Monocle 2012.</p>
+		<p>The Casino in the center of the city is open 365 days a year.  Zürich’s airport is a mega shopping center as well which makes it worth while to arrive an extra hour early just to browse them.  </p>
+
+
+
+
+  
+    </div>
+</section>
+</div>			
+		<div class="container">
+			<div class="clearfix"></div>
+			<section class="footer">
+				<div class="links">
+	<a href="Home" title="Lobby">LOBBY</a><img src="../img/img-14.png" alt="bulletin" /><a href="AboutUs.html" title="ABOUT LUXURY GROUP">ABOUT US</a><img src="../img/img-14.png" alt="bulletin" /><a href="JoinUs.html" title="JOIN LUXURY GROUP">JOIN US</a><img src="../img/img-14.png" alt="bulletin" /><a href="CityInformation.html" title="CITY INFORMATION">CITY INFORMATION</a><img src="../img/img-14.png" alt="bulletin" /><a href="Contact.html" title="Contact Luxury Group">CONTACT</a>	<div class="row">
+		<a href="Home/Terms" title="Terms of Use">Terms of Use</a>	</div>
+</div>
+<div class="row">
+	<div class="col-sm-6 copy">
+		Copyright © 2014 - 2025 The Luxury Group. | All Rights Reserved
+	</div>
+	<div class="col-sm-6 regi">
+		 Dun & Bradstreet Registration No. 93-191-7702
+	</div>
+</div>
+
+			</section>
+		</div>	
+		</div>
+		</div>
+		<script type="text/javascript" src="../js/bootstrap.min.js"></script><script type="text/javascript" src="../js/jquery.scrollbox.js"></script><script type="text/javascript" src="../js/jquery.bxslider.js"></script><script type="text/javascript" src="../js/carousel.js"></script>		<script>
+		    var lssliderparam = [{"divid":".lshowcase-wrap-carousel-0","auto":"false","pause":"4000","autohover":"true","ticker":"true","tickerhover":"true","useCSS":"false","autocontrols":"false","speed":"130000","slidewidth":"200","slidemargin":"3","infiniteloop":"true","pager":"false","controls":"true","minslides":"1","maxslides":"8","moveslides":"1"}];
+		</script>
+		<script>
+			$(function () {
+				$('#marque').scrollbox({
+					linear: true,
+					step: 1,
+					delay: 0,
+					speed: 50
+				});
+			});
+		</script>
+		<link rel="stylesheet" type="text/css" href="../css/colorbox.css" />	</body>
+</html>
