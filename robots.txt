@@ -1,6 +1,2 @@
-User-Agent: *
-Disallow: /admin/
-Disallow: /dev/
-Disallow: /test/
-
-Sitemap: sitemap.xml
+User-agent: *
+Disallow: /
