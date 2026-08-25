@@ -211,31 +211,31 @@
 .ui-icon {
     width: 16px;
     height: 16px;
-    background-image: url(images/ui-icons_222222_256x240.png)
+    background-image: url(images/ui-icons_222222_256x240.webp)
 }
 
 .ui-widget-content .ui-icon,
 .ui-widget-header .ui-icon {
-    background-image: url(images/ui-icons_222222_256x240.png)
+    background-image: url(images/ui-icons_222222_256x240.webp)
 }
 
 .ui-state-default .ui-icon {
-    background-image: url(images/ui-icons_888888_256x240.png)
+    background-image: url(images/ui-icons_888888_256x240.webp)
 }
 
 .ui-state-active .ui-icon,
 .ui-state-focus .ui-icon,
 .ui-state-hover .ui-icon {
-    background-image: url(images/ui-icons_454545_256x240.png)
+    background-image: url(images/ui-icons_454545_256x240.webp)
 }
 
 .ui-state-highlight .ui-icon {
-    background-image: url(images/ui-icons_2e83ff_256x240.png)
+    background-image: url(images/ui-icons_2e83ff_256x240.webp)
 }
 
 .ui-state-error .ui-icon,
 .ui-state-error-text .ui-icon {
-    background-image: url(images/ui-icons_cd0a0a_256x240.png)
+    background-image: url(images/ui-icons_cd0a0a_256x240.webp)
 }
 
 .ui-icon-carat-1-n {
