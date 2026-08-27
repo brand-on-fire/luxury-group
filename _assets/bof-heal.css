@@ -1,0 +1,6 @@
+/* Nivo slider heal. With no slider JS every slide renders stacked and the
+   wrapper keeps a hard height sized to that stack, leaving a dead band under
+   the one visible slide. Let the wrapper shrink to the visible slide. */
+.banner_area, .banner.hm-slider, .slider-wrapper { height: auto !important; }
+.slider-wrapper .nivoSlider { height: auto !important; }
+.blackoverlay { height: 100% !important; }
